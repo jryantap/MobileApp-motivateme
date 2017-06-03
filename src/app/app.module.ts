@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { QuotesPage} from '../pages/quotes/quotes';
 import { CameraPage } from "../pages/camera/camera";
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CameraPage } from "../pages/camera/camera";
     CameraPage
   ],
   providers: [
+    Camera,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
