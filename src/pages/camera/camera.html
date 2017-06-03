@@ -1,24 +1,37 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>camera</ion-title>
+    <ion-title>YOU LOOK GREAT!</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content class="vertical-align-center">
-
-  <h5 style="text-align: center">WhO Is HaPPy ToDaY?  YOU ARE!</h5>
-  <button
-  ion-button
-  icon-left
-  block
-  outline
-  type="button"
-  (click) = "takePhotos()">
-  <ion-icon name="camera"></ion-icon>
-  Open camera
-  </button>
-  Latest Picture:
-  <img [src]="base64Image" align-self-center>
-
+<ion-content>
+  <ion-row>
+    <ion-col text-center>
+      <h5>LOOK HOW AWESOME YOU ARE TODAY!</h5>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <button
+        ion-button
+        icon-left
+        block
+        outline
+        type="button"
+        (click)="onTakePhoto()">
+        <ion-icon name="camera"></ion-icon>
+        Open Camera
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="imageUrl != ''">
+    <ion-col>
+      <img [src]="imageUrl">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+    </ion-col>
+  </ion-row>
 </ion-content>

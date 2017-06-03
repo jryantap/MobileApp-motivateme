@@ -10,7 +10,7 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 
 export class CameraPage {
 
-  public base64Image: string;
+  imageUrl = '';
 
   constructor(private camera: Camera) {
 
@@ -26,7 +26,7 @@ export class CameraPage {
       saveToPhotoAlbum: true
     }
     this.camera.getPicture(options).then((imageData) => {
-      this.base64Image = 'data.image/jpeg;base64, ' + imageData;
+      this.imageUrl = 'data.image/jpeg;base64, ' + imageData;
     }, (err) => {
       console.log(err);
     })
