@@ -1,14 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      HOW ARE YOU
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+  <ion-card [navPush]="toCameraPage">
+    <img src="assets/botw-1.png">
+    <div class="card-title"> YOU ARE THE BEST </div>
+    <div class="card-subtitle">   </div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/botw-2.png">
+    <div class="card-title"> YOU HAVE A NICE DAY!</div>
+    <div class="card-subtitle"> </div>
+  </ion-card>
+  
+  <ion-card>
+    <img src="assets/botw-3.png">
+    <div class="card-title">MOTIVATE YOURSELF</div>
+    <div class="card-subtitle"> </div>
+  </ion-card>
+ 
 </ion-content>
