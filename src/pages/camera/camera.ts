@@ -6,6 +6,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-camera',
   templateUrl: 'camera.html',
 })
+
 export class CameraPage {
 
 }
+
+// TODO:  add back button to go home
