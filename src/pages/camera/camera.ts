@@ -18,12 +18,12 @@ export class CameraPage {
 
   takePhotos() {
     const options: CameraOptions = {
+      cameraDirection: 1,
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      saveToPhotoAlbum: true,
-      cameraDirection: 1
+      saveToPhotoAlbum: true
     }
     this.camera.getPicture(options).then((imageData) => {
       this.base64Image = 'data.image/jpeg;base64, ' + imageData;
