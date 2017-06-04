@@ -43,11 +43,3 @@ export class CameraPage {
   }
 }
 
-/**
- * 
- * TEST MIC FOR GIT HUB
- * 
- * 
- * 
- * 
- */
