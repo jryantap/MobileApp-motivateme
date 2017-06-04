@@ -19,19 +19,25 @@
         block
         outline
         type="button"
-        (click)="onTakePhoto()">
+        (click)="takePhotos()">
         <ion-icon name="camera"></ion-icon>
         Open Camera
       </button>
     </ion-col>
   </ion-row>
-  <ion-row *ngIf="imageUrl != ''">
-    <ion-col>
-      <img [src]="imageUrl">
+  <ion-row>
+    <ion-col align-items-center>
+      Your awesome pic:
+      <img [src]="base64Image" *ngIf="base64Image"/>
+      <!--<img src="{{base64Image}}"/>-->
+      <!--<img id="camera-image"/>-->
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
     </ion-col>
   </ion-row>
+
+
+
 </ion-content>
