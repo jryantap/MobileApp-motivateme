@@ -19,7 +19,6 @@
       *ngFor="let quoteGroup of quoteCollection"
       [navPush]="toQuotesPage"
       [navParams]="quoteGroup">
-      <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
       <h2>{{ quoteGroup.category | uppercase }}</h2>
       <p>{{ quoteGroup.quotes.length }} Quotes</p>
     </button>
