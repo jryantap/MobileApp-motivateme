@@ -1,11 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-title center>
-      HOW ARE YOU
+    <ion-title align="center">
+      HI
     </ion-title>
   </ion-navbar>
 </ion-header>
 
+
+<!-- TO DO:  link cards to other pages -->
 <ion-content class="card-background-page">
   <ion-card [navPush]="toCameraPage">
     <img src="assets/botw-1.png">
@@ -13,7 +15,9 @@
     <div class="card-subtitle">   </div>
   </ion-card>
 
-  <ion-card>
+  <ion-card
+    [navPush]="toLibraryPage"
+    [navParams] = "quoteCollection">
     <img src="assets/botw-2.png">
     <div class="card-title"> YOU HAVE A NICE DAY!</div>
     <div class="card-subtitle"> </div>
