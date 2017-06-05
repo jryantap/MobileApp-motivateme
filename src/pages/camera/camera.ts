@@ -43,4 +43,3 @@ export class CameraPage {
   }
 }
 
-// TODO:  add back button to go home
