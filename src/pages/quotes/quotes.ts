@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 import { Quote } from "../../data/quotes.interface";
 
 @Component({
