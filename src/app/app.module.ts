@@ -9,6 +9,7 @@ import { QuotesPage} from '../pages/quotes/quotes';
 import { CameraPage } from "../pages/camera/camera";
 import { Camera } from '@ionic-native/camera';
 import {LibraryPage} from "../pages/library/library";
+import {CutePicsPage} from "../pages/cutepics/cutepics";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {LibraryPage} from "../pages/library/library";
     HomePage,
     QuotesPage,
     CameraPage,
-    LibraryPage
+    LibraryPage,
+    CutePicsPage
 
   ],
   imports: [
@@ -29,7 +31,8 @@ import {LibraryPage} from "../pages/library/library";
     HomePage,
     QuotesPage,
     CameraPage,
-    LibraryPage
+    LibraryPage,
+    CutePicsPage
 
   ],
   providers: [

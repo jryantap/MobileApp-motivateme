@@ -4,6 +4,7 @@ import { CameraPage } from "../camera/camera";
 import quotes from '../../data/quotes';
 import {Quote} from "../../data/quotes.interface";
 import {LibraryPage} from "../library/library";
+import {CutePicsPage} from "../cutepics/cutepics";
 
 @Component({
   selector: 'page-home',
@@ -15,6 +16,7 @@ export class HomePage implements OnInit {
   toCameraPage = CameraPage;
   toQuotesPage = QuotesPage;
   toLibraryPage = LibraryPage;
+  toCutePicsPage = CutePicsPage;
 
   ngOnInit(){
     this.quoteCollection = quotes;
