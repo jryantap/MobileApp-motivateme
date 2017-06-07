@@ -11,6 +11,7 @@ export class CutePicsPage {
   private pics: Array<any> = ['assets/botw-1.png', 'assets/botw-2.png', 'assets/botw-3.png'];
   private currentPicture: string;
 
+
   randomize(){
     var rand = Math.floor((Math.random() * this.pics.length));
     return rand;

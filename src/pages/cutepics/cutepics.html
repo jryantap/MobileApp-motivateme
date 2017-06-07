@@ -8,10 +8,17 @@
 
 
 <!-- TO DO:  link cards to other pages -->
-<ion-content>
-  <button ion-button full (click)="onClickThis()">Full Button</button>
-
-  <img [src]="currentPicture" width="305" height="312" id="myPicture" alt="some image">
+<ion-content class = "myphoto">
+  <div>
+  <img [src]="currentPicture "
+       width="281" height="394"
+       id="myPicture"
+       style="align-items: center"
+       alt="assets/botw-2.png">
+  </div>
+  <div>
+    <button ion-button full (click)="onClickThis()">SMILE A LITTLE</button>
+  </div>
 
 
 </ion-content>

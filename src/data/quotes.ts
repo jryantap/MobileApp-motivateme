@@ -1,5 +1,6 @@
 export default [
   {
+    //default = [{category, quotes[{id, person, text}], icon}]
     category: 'inspirational',
     quotes: [
       {
