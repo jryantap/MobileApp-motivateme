@@ -44,5 +44,8 @@ export class CameraPage {
 
   // TO DO:  add a social sharing button here using base64Image, may work
   // check online how to do it
+  shareViaInstagram(){
+
+  }
 }
 
