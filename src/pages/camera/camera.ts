@@ -41,5 +41,8 @@ export class CameraPage {
       console.log(err);
     })
   }
+
+  // TO DO:  add a social sharing button here using base64Image, may work
+  // check online how to do it
 }
 
