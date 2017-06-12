@@ -1,3 +1,5 @@
+<!--- this is a simple camera template using some Angular compoenents -->
+
 <ion-header>
   <ion-navbar>
     <ion-title align="center"></ion-title>
@@ -12,6 +14,7 @@
     </ion-col>
   </ion-row>
   <ion-row>
+    <!-- after picture is taken, show message -->
     <ion-col align="center">
       <p *ngIf="hasTakenPicture">YOU LOOK GREAT!!</p>
       <img [src]="base64Image" *ngIf="base64Image"/>

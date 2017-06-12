@@ -11,6 +11,7 @@ import { Camera } from '@ionic-native/camera';
 import {LibraryPage} from "../pages/library/library";
 import {CutePicsPage} from "../pages/cutepics/cutepics";
 
+/* Add Pages here so Angular can detect them */
 @NgModule({
   declarations: [
     MyApp,

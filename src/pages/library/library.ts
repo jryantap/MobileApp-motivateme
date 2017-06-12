@@ -9,9 +9,11 @@ import { QuotesPage } from "../quotes/quotes";
   templateUrl: 'library.html'
 })
 export class LibraryPage implements OnInit {
+  //quoteCollection takes an object of quotes from quotes.ts
   quoteCollection: {category: string, quotes: Quote[], icon: string}[];
   toQuotesPage = QuotesPage;
 
+  //this function takes the quotes data and store them in quotesCollection object
   ngOnInit() {
     this.quoteCollection = quotes;
   }

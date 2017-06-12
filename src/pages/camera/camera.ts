@@ -17,6 +17,7 @@ export class CameraPage {
     private toastController: ToastController){
   }
 
+  // this is ionic's native camera feature documentation
   takePhotos() {
     const options: CameraOptions = {
       quality: 75,
@@ -30,6 +31,7 @@ export class CameraPage {
       saveToPhotoAlbum: true,
       allowEdit: false
     }
+    //save picture and display it to template
     this.camera.getPicture(options).then((imageData) => {
       this.base64Image = "data:image/jpeg;base64," + imageData;
       let cameraImageSelector = document.getElementById('camera-image');
