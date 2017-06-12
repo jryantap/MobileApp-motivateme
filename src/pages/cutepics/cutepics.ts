@@ -10,7 +10,7 @@ export class CutePicsPage {
   //set different local pics to array
   private pics: Array<any> = [
     'assets/botw-1.png',
-    'assets/botw-2.png', 
+    'assets/botw-2.png',
     'assets/botw-3.png'
   ];
   private currentPicture: string;
@@ -24,8 +24,9 @@ export class CutePicsPage {
 
   //click to randomize pictures by calling randomize()
   onClickThis(){
+    this.showAww = true;
     var newUrlIndex = this.randomize();
     this.currentPicture = this.pics[newUrlIndex];
-    this.showAww = false;
+
   }
 }

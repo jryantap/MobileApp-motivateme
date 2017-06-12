@@ -20,10 +20,10 @@
         </div>
     </ion-col>
   </ion-row>
-  <ion-row *ngIf="!showAww">
+  <ion-row>
     <ion-col>
       <div>
-        <p center>Check go to <a href="http://www.reddit.com/r/aww">/r/aww</a></p>
+        <p *ngIf="showAww" align="center">Check go to <a href="http://www.reddit.com/r/aww">/r/aww</a></p>
       </div>
     </ion-col>
   </ion-row>

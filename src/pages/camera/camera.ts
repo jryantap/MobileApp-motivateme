@@ -11,10 +11,10 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 export class CameraPage {
   base64Image: string;
   hasTakenPicture: boolean = false;
-  messages: string[] =['YOU LOOK GREAT!', 'YOU ALWAYS LOOK AWESOME', 'SO COOL!',
+  messages: string[] =['YOU LOOK GREAT!', 'YOU ALWAYS LOOK GREAT', 'SO COOL!',
                        'LOOK OUT WORLD!', 'GREAT SENSE OF STYLE!', 'YOU ARE ENOUGH',
                        'YOU\'RE ONE OF A KIND','YOU\'RE INSPIRING!', 'FLATTER YOURSELF!'];
-  
+
   constructor(
     private camera: Camera,
     private toastController: ToastController){
