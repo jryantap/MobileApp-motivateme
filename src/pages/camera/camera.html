@@ -17,7 +17,8 @@
     <!-- after picture is taken, show message -->
     <ion-col align="center">
       <div>
-        <H1 *ngIf="hasTakenPicture">YOU ALWAYS LOOK AWESOME!!</H1>
+        <!-- randomize positive message -->
+        <H1 *ngIf="hasTakenPicture">{{ text }}</H1>
       </div>
       <img [src]="base64Image" *ngIf="base64Image"/>
       <!--<img src="{{base64Image}}"/> -->

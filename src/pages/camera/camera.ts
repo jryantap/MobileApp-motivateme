@@ -11,11 +11,21 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 export class CameraPage {
   base64Image: string;
   hasTakenPicture: boolean = false;
+  messages: string[] =['YOU LOOK GREAT!', 'YOU ALWAYS LOOK AWESOME', 'SO COOL!', 'LOOK OUT WORLD!', 'GREAT SENSE OF STYLE!', 'YOU ARE ENOUGH', 'YOU\'RE ONE OF A KIND','YOU\'RE INSPIRING!'];
+
 
   constructor(
     private camera: Camera,
     private toastController: ToastController){
   }
+
+  //used for random text
+  randomize(){
+    var rand = Math.floor((Math.random() * this.messages.length));
+    return rand;
+  }
+  text = this.messages[this.randomize()];
+
 
   // this is ionic's native camera feature documentation
   takePhotos() {
