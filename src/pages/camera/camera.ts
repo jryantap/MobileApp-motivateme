@@ -33,7 +33,7 @@ export class CameraPage {
     }
     //save picture and display it to template
     this.camera.getPicture(options).then((imageData) => {
-      this.hasTakenPicture = true;
+      this.hasTakenPicture = true;  //will show image to template
       this.base64Image = "data:image/jpeg;base64," + imageData;
       let cameraImageSelector = document.getElementById('camera-image');
       cameraImageSelector.setAttribute('src', this.base64Image);

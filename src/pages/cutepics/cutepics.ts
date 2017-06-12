@@ -8,15 +8,17 @@ import { Component } from '@angular/core';
 
 export class CutePicsPage {
 
+  //set different local pics to array
   private pics: Array<any> = ['assets/botw-1.png', 'assets/botw-2.png', 'assets/botw-3.png'];
   private currentPicture: string;
 
-
+  //this will randomize the array numbers
   randomize(){
     var rand = Math.floor((Math.random() * this.pics.length));
     return rand;
   }
 
+  //click to randomize pictures by calling randomize()
   onClickThis(){
     var newUrlIndex = this.randomize();
     this.currentPicture = this.pics[newUrlIndex];
