@@ -51,7 +51,10 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-camera": {},
+            "cordova-plugin-camera": {
+                "CAMERA_USAGE_DESCRIPTION": " ",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
+            },
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},

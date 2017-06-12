@@ -19,7 +19,6 @@ export class CameraPage {
 
   // this is ionic's native camera feature documentation
   takePhotos() {
-    this.hasTakenPicture = true;
     const options: CameraOptions = {
       quality: 75,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -27,18 +26,17 @@ export class CameraPage {
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       correctOrientation: true,
-      targetWidth: 100,
-      targetHeight: 100,
+      targetWidth: 500,
+      targetHeight: 500,
       saveToPhotoAlbum: true,
       allowEdit: false
     }
     //save picture and display it to template
     this.camera.getPicture(options).then((imageData) => {
-
+      this.hasTakenPicture = true;
       this.base64Image = "data:image/jpeg;base64," + imageData;
       let cameraImageSelector = document.getElementById('camera-image');
       cameraImageSelector.setAttribute('src', this.base64Image);
-
 
     }, (err) => {
       const toast = this.toastController.create({
