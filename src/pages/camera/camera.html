@@ -10,16 +10,16 @@
 <ion-content>
   <ion-row>
     <ion-col text-center>
-      <h5>HOW AWESOME ARE YOU TODAY?!</h5>
+      <h5>YOU ALWAYS LOOK GREAT!</h5>
     </ion-col>
   </ion-row>
   <ion-row>
     <!-- after picture is taken, show message -->
     <ion-col align="center">
-      <p *ngIf="hasTakenPicture">YOU LOOK GREAT!!</p>
       <img [src]="base64Image" *ngIf="base64Image"/>
       <!--<img src="{{base64Image}}"/>-->
       <!--<img id="camera-image"/>-->
+      <p>YOU LOOK GREAT!</p>
     </ion-col>
   </ion-row>
   <ion-row>
