@@ -27,6 +27,5 @@ export class CutePicsPage {
     this.showAww = true;
     var newUrlIndex = this.randomize();
     this.currentPicture = this.pics[newUrlIndex];
-
   }
 }
