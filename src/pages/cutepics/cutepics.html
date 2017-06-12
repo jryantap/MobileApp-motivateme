@@ -5,17 +5,26 @@
 </ion-header>
 <!-- just a simple random picture viewer -->
 <ion-content class = "myphoto">
-  <div>
-    <img
-      [src]="currentPicture"
-      width="281" height="394"
-      id="myPicture"
-      style="align-items: center">
-  </div>
-  <div>
-    <!-- click button to get random pictures from ts component arraylist -->
-    <button ion-button full block (click)="onClickThis()">SMILE A LITTLE</button>
-  </div>
-
-
+  <ion-row>
+    <ion-col>
+      <div>
+        <img
+        [src]="currentPicture"
+        width="281" height="394"
+        id="myPicture"
+        style="align-items: center">
+      </div>
+      <div>
+        <!-- click button to get random pictures from ts component arraylist -->
+        <button ion-button full block (click)="onClickThis()" #click>SMILE A LITTLE</button>
+        </div>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="!showAww">
+    <ion-col>
+      <div>
+        <p center>Check go to <a href="http://www.reddit.com/r/aww">/r/aww</a></p>
+      </div>
+    </ion-col>
+  </ion-row>
 </ion-content>
