@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title align="center">YOU LOOK GREAT!</ion-title>
+    <ion-title align="center"></ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,7 +8,15 @@
 <ion-content>
   <ion-row>
     <ion-col text-center>
-      <h5>LOOK HOW AWESOME YOU ARE TODAY!</h5>
+      <h5>HOW AWESOME ARE YOU TODAY?!</h5>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col align="center">
+      <p *ngIf="hasTakenPicture">YOU LOOK GREAT!!</p>
+      <img [src]="base64Image" *ngIf="base64Image"/>
+      <!--<img src="{{base64Image}}"/>-->
+      <!--<img id="camera-image"/>-->
     </ion-col>
   </ion-row>
   <ion-row>
@@ -23,14 +31,6 @@
         <ion-icon name="camera"></ion-icon>
         Open Camera
       </button>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col align="center">
-      Your awesome pic:
-      <img [src]="base64Image" *ngIf="base64Image"/>
-      <!--<img src="{{base64Image}}"/>-->
-      <!--<img id="camera-image"/>-->
     </ion-col>
   </ion-row>
   <ion-row>

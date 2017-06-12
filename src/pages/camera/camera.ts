@@ -10,6 +10,7 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 
 export class CameraPage {
   base64Image: string;
+  hasTakenPicture: boolean = false;
 
   constructor(
     private camera: Camera,
@@ -33,6 +34,8 @@ export class CameraPage {
       this.base64Image = "data:image/jpeg;base64," + imageData;
       let cameraImageSelector = document.getElementById('camera-image');
       cameraImageSelector.setAttribute('src', this.base64Image);
+      this.hasTakenPicture = true;
+
     }, (err) => {
       const toast = this.toastController.create({
         message: 'Could not take the image.  Please try again',

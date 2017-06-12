@@ -20,6 +20,5 @@ export class CutePicsPage {
   onClickThis(){
     var newUrlIndex = this.randomize();
     this.currentPicture = this.pics[newUrlIndex];
-
   }
 }
