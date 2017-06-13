@@ -22,6 +22,7 @@ export class CutePicsPage {
   private currentPicture: string;
   private showAww: boolean = false;
   private counter: number = 0;
+  private notClickedYet: boolean = true;
 
 
   //this will randomize the array numbers
@@ -32,6 +33,7 @@ export class CutePicsPage {
 
   //click to randomize pictures by calling randomize()
   onClickThis(){
+    this.notClickedYet = false;
     this.counter += 1;
     if(this.counter == 3)
     {
