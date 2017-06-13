@@ -1,6 +1,15 @@
 /* for quote author appearing lower right of ion card */
 
 page-quotes {
+
+  .mainbg{
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+
   .author {
     text-align: right;
     text-transform: uppercase;
@@ -10,5 +19,12 @@ page-quotes {
     &:before {
       content: ' -';
     }
+  }
+
+  .bg{
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
 }

@@ -4,9 +4,9 @@
   </ion-navbar>
 </ion-header>
 <!--start content here-->
-<ion-content padding>
+<ion-content padding class="mainbg" >
   <!-- display each ionic card with the quotes -->
-  <ion-card *ngFor="let quote of quoteGroup.quotes; let i = index">
+  <ion-card *ngFor="let quote of quoteGroup.quotes; let i = index" class="bg">
     <ion-card-header>
       #{{ i + 1 }}
     </ion-card-header>
