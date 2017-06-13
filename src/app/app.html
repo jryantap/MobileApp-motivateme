@@ -1,31 +1,40 @@
 <!-- add navigation bar here -->
-
 <ion-menu [content]="nav">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Thank you</ion-title>
+      <ion-title>TITLE</ion-title>
     </ion-toolbar>
   </ion-header>
 
 <!--start content -->
 <ion-content>
   <ion-list>
-    <button ion-item>
-    <ion-icon name="quote" item-left></ion-icon>
-    TEST
-    </button>
-    <button ion-item>
+    <ion-item>
+      <ion-icon center name="logo-reddit" item-left></ion-icon>
+      Thanks to reddit... yadayadayadayadaafajfkajsdf;kajmf;<br> akfafasfdkjakfj <br>
+    </ion-item>
+    <ion-item>
       <ion-icon name="settings" item-left></ion-icon>
-      TEST 2
-    </button>
+      THANKS to Topanga for<br>her PICS!
+    </ion-item>
+    <ion-item>
+      <ion-row align="center">
+        <ion-col>
+          <a href="http://www.nerdetitan.com">
+          <ion-icon name="md-globe"></ion-icon>
+          </a>
+        </ion-col>
+        <ion-col>
+          <a href="https://twitter.com/nerdetitan">
+          <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+
   </ion-list>
 </ion-content>
 </ion-menu>
-
-
-
-
-
-
 
 <ion-nav [root]="rootPage" #nav></ion-nav>
