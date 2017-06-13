@@ -1,3 +1,14 @@
-page-quotes {
+/* for quote author appearing lower right of ion card */
 
+page-quotes {
+  .author {
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+      content: ' -';
+    }
+  }
 }

@@ -65,6 +65,17 @@ export default [
         id: '9',
         person: 'Donna Brazile',
         text: 'I was motivated to be different in part because I was different.'
+      },
+      {
+        id: '10',
+        person: 'Anonymous',
+        text: 'The harder you work for something, the greater you will feel when you achieve it.'
+
+      },
+      {
+        id: '11',
+        person: 'Stephen Curry',
+        text: 'Success is not an accident.  Are the habits you have today on par with the dreams you have for tomorrow?'
       }
     ],
     icon: 'body'
