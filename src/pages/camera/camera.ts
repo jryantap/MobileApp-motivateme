@@ -67,11 +67,12 @@ export class CameraPage {
   // TO DO:  add a social sharing button here using base64Image,
   // check Ionic documentation on how to do it
   shareViaInstagram(){
-    this.socialSharing.shareViaInstagram('I used MotivateMe app to share this picture!', this.base64Image).then(() =>{
+    this.socialSharing.shareViaInstagram('I used MotivateMe app to share this picture!', this.base64Image)
+      .then(() =>{
       console.log('Shared!');
-    }).catch((error: any) => {
+      }).catch((error: any) => {
       console.error(error)
-    });
+      });
   }
 
   //twitter share button
@@ -79,17 +80,29 @@ export class CameraPage {
     this.socialSharing.shareViaTwitter
     ('I used MotivateMe app to share this picture!', this.base64Image, 'http://www.nerdetitan.com/')
       .then(() => {
-    }).catch((error: any) => {
-    });
+      console.log('Shared!')
+      }).catch((error: any) => {
+      });
   }
 
   //share to text
   shareViaWhatsApp(){
-    this.socialSharing.shareViaWhatsApp('I used MotivateMe app to share my picture!', this.base64Image, 'http://www.nerdetitan.com').then(() => {
-    })
-    .catch((error:any)=>{
-
-    })
+    this.socialSharing.shareViaWhatsApp('I used MotivateMe app to share my picture!', this.base64Image, 'http://www.nerdetitan.com')
+      .then(() => {
+      console.log('Shared!');
+      })
+      .catch((error:any)=>{
+      })
   }
+
+  shareToOtherApps(){
+    this.socialSharing.share('General Share',null, this.base64Image, 'http://www.nerdetitan.com')
+      .then(() =>{
+      })
+      .catch((error:any) =>{
+      })
+
+  }
+
 }
 

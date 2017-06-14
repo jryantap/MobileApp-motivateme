@@ -15,6 +15,7 @@
   <ion-col *ngIf="hasTakenPicture" align="center">
     <!-- randomize positive message -->
     <H1 align="center">{{ text }}</H1>
+    <p align="center">(You don't have to, but if you want, share it to the world!)</p>
   </ion-col>
   <ion-row *ngIf="hasTakenPicture" align="center">
     <!-- after picture is taken, show message -->
@@ -34,9 +35,16 @@
     </ion-col>
     <ion-col>
       <ion-icon
-        name="md-text"
+        name="logo-whatsapp"
         class="icon-size"
         (click)="shareViaWhatsApp()">
+      </ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-icon
+        name="md-globe"
+        class="icon-size"
+        (click)="shareToOtherApps()">
       </ion-icon>
     </ion-col>
   </ion-row>
