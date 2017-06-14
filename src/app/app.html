@@ -2,25 +2,20 @@
 <ion-menu [content]="nav">
   <ion-header>
     <ion-toolbar>
-      <ion-title>TITLE</ion-title>
+      <ion-title></ion-title>
     </ion-toolbar>
   </ion-header>
 
 <!--start content -->
 <ion-content>
   <ion-list>
-    <button ion-item>
-      <ion-icon center name="logo-reddit" item-left></ion-icon>
-      <!-- Brighten up your day:  Link to reddit.com/r/eyebleach -->
-      Blah blah blah blah... yadayadayadayadaafajfkajsdf;kajmf;<br> akfafasfdkjakfj <br>
-    </button>
-    <button ion-item>
+    <button ion-item (click)="loadPage(homePage)" >
       <ion-icon name="settings" item-left></ion-icon>
-      THANKS to Topanga for<br>her PICS!
+      Motive Yourself
     </button>
-    <button ion-item>
+    <button ion-item (click)="loadPage(aboutPage)">
       <ion-icon name="md-hand" item-left></ion-icon>
-        About Developer
+        About The Developer
     </button>
     <ion-item>
       <ion-row align="center">
@@ -36,7 +31,7 @@
         </ion-col>
       </ion-row>
     </ion-item>
- 
+
 
 
 

@@ -10,6 +10,7 @@ import { CameraPage } from "../pages/camera/camera";
 import { Camera } from '@ionic-native/camera';
 import {LibraryPage} from "../pages/library/library";
 import {CutePicsPage} from "../pages/cutepics/cutepics";
+import {AboutPage} from "../pages/about/about";
 
 /* Add Pages here so Angular can detect them */
 @NgModule({
@@ -19,7 +20,8 @@ import {CutePicsPage} from "../pages/cutepics/cutepics";
     QuotesPage,
     CameraPage,
     LibraryPage,
-    CutePicsPage
+    CutePicsPage,
+    AboutPage
 
   ],
   imports: [
@@ -33,7 +35,8 @@ import {CutePicsPage} from "../pages/cutepics/cutepics";
     QuotesPage,
     CameraPage,
     LibraryPage,
-    CutePicsPage
+    CutePicsPage,
+    AboutPage
 
   ],
   providers: [
