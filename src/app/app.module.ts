@@ -12,6 +12,7 @@ import {LibraryPage} from "../pages/library/library";
 import {CutePicsPage} from "../pages/cutepics/cutepics";
 import {AboutPage} from "../pages/about/about";
 import {SocialSharing} from "@ionic-native/social-sharing";
+import {AdMob} from '@ionic-native/admob';
 
 /* Add Pages here so Angular can detect them */
 @NgModule({
@@ -45,6 +46,7 @@ import {SocialSharing} from "@ionic-native/social-sharing";
     StatusBar,
     SplashScreen,
     SocialSharing,
+    AdMob,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

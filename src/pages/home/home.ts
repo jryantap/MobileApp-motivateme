@@ -13,7 +13,6 @@ import {CutePicsPage} from "../cutepics/cutepics";
 export class HomePage implements OnInit {
   //gets objects and store it in quoteCollection for data passing to other components
   quoteCollection: {category: string, quotes: Quote[], icon: string}[];
-
   //switch pages
   toCameraPage = CameraPage;
   toQuotesPage = QuotesPage;
@@ -24,4 +23,6 @@ export class HomePage implements OnInit {
   ngOnInit(){
     this.quoteCollection = quotes;
   }
+
+
 }
