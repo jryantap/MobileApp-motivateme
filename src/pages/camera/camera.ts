@@ -73,5 +73,23 @@ export class CameraPage {
       console.error(error)
     });
   }
+
+  //twitter share button
+  shareViaTwitter() {
+    this.socialSharing.shareViaTwitter
+    ('I used MotivateMe app to share this picture!', this.base64Image, 'http://www.nerdetitan.com/')
+      .then(() => {
+    }).catch((error: any) => {
+    });
+  }
+
+  //share to text
+  shareViaWhatsApp(){
+    this.socialSharing.shareViaWhatsApp('I used MotivateMe app to share my picture!', this.base64Image, 'http://www.nerdetitan.com').then(() => {
+    })
+    .catch((error:any)=>{
+
+    })
+  }
 }
 
