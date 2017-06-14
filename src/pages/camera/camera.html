@@ -16,9 +16,14 @@
   <ion-row>
     <!-- after picture is taken, show message -->
     <ion-col align="center">
-      <div>
+      <div *ngIf="hasTakenPicture">
         <!-- randomize positive message -->
-        <H1 *ngIf="hasTakenPicture">{{ text }}</H1>
+        <H1>{{ text }}</H1>
+        <button
+          ion-button full color="secondary"
+          (click)="shareViaInstagram()">
+          Share on Instagram
+        </button>
       </div>
       <img [src]="base64Image" *ngIf="base64Image"/>
       <!--<img src="{{base64Image}}"/> -->

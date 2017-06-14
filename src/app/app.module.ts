@@ -11,6 +11,7 @@ import { Camera } from '@ionic-native/camera';
 import {LibraryPage} from "../pages/library/library";
 import {CutePicsPage} from "../pages/cutepics/cutepics";
 import {AboutPage} from "../pages/about/about";
+import {SocialSharing} from "@ionic-native/social-sharing";
 
 /* Add Pages here so Angular can detect them */
 @NgModule({
@@ -43,6 +44,7 @@ import {AboutPage} from "../pages/about/about";
     Camera,
     StatusBar,
     SplashScreen,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

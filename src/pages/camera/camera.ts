@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import {ToastController } from 'ionic-angular';
 import {Camera, CameraOptions} from '@ionic-native/camera';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
-@IonicPage()
+
+
 @Component({
   selector: 'page-camera',
   templateUrl: 'camera.html',
@@ -11,6 +13,7 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 export class CameraPage {
   base64Image: string;
   hasTakenPicture: boolean = false;
+
   //this will be an array of string that will be shown after user picture is displayed on the template
   messages: string[] =['YOU LOOK GREAT!', 'YOU ALWAYS LOOK GREAT', 'SO COOL!',
                        'LOOK OUT WORLD!', 'GREAT SENSE OF STYLE!', 'YOU ARE ENOUGH',
@@ -18,7 +21,8 @@ export class CameraPage {
 
   constructor(
     private camera: Camera,
-    private toastController: ToastController){
+    private toastController: ToastController,
+    private socialSharing: SocialSharing){
   }
 
   //used for random text
@@ -29,7 +33,7 @@ export class CameraPage {
   text = this.messages[this.randomize()];
 
 
-  // this is ionic's native camera feature documentation
+  //this is ionic's native camera feature documentation
   takePhotos() {
     const options: CameraOptions = {
       quality: 75,
@@ -40,7 +44,7 @@ export class CameraPage {
       correctOrientation: true,
       targetWidth: 500,
       targetHeight: 500,
-      saveToPhotoAlbum: true,
+      saveToPhotoAlbum: false,
       allowEdit: false
     }
     //save picture and display it to template
@@ -53,16 +57,21 @@ export class CameraPage {
     }, (err) => {
       const toast = this.toastController.create({
         message: 'Could not take the image.  Please try again',
+        duration: 3000
       });
       toast.present();
       console.log(err);
     })
   }
 
-  // TO DO:  add a social sharing button here using base64Image, may work
-  // check online how to do it
+  // TO DO:  add a social sharing button here using base64Image,
+  // check Ionic documentation on how to do it
   shareViaInstagram(){
-
+    this.socialSharing.shareViaInstagram(this.text, this.base64Image).then(() =>{
+      console.log('Shared!');
+    }).catch((error: any) => {
+      console.error(error)
+    });
   }
 }
 
