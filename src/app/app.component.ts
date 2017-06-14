@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import {AboutPage} from "../pages/about/about";
 import {AdMob} from '@ionic-native/admob';
 
+
 interface AdMobType {
   banner: string,
   interstitial: string
@@ -21,6 +22,7 @@ export class MyApp {
   @ViewChild('nav') nav: NavController;
 
 
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
               private menuCtrl: MenuController, private admob: AdMob) {
     platform.ready().then(() => {
@@ -31,7 +33,7 @@ export class MyApp {
        * Reference from Point Developer for the AdMob Code
        * http://pointdeveloper.com/  Thanks
        */
-      //admob id and properties
+      //adMob id and properties
       var admobid: AdMobType;
       if (/(android)/i.test(navigator.userAgent)) {
         admobid = { // for Android
@@ -53,6 +55,7 @@ export class MyApp {
       this.admob.createBanner({
         adId: admobid.banner,
         isTesting: true,//comment this out before publishing the app
+        position: admob.AD_POSITION.BOTTOM_CENTER,
         autoShow: true
       });
       this.admob.prepareInterstitial({
@@ -62,6 +65,7 @@ export class MyApp {
       });
     });
   }
+
   //onClick nav contoller method for menu page direct
   //take current on click item to destination page
   loadPage(page: any)
