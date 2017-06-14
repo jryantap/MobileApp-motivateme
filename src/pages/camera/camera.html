@@ -6,30 +6,43 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content class="camera-background">
   <ion-row>
     <ion-col text-center>
       <h5>HOW AWESOME ARE YOU TODAY?</h5>
     </ion-col>
   </ion-row>
-  <ion-row>
+  <ion-col *ngIf="hasTakenPicture" align="center">
+    <!-- randomize positive message -->
+    <H1 align="center">{{ text }}</H1>
+  </ion-col>
+  <ion-row *ngIf="hasTakenPicture" align="center">
     <!-- after picture is taken, show message -->
-    <ion-col align="center">
-      <div *ngIf="hasTakenPicture">
-        <!-- randomize positive message -->
-        <H1>{{ text }}</H1>
-        <button
-          ion-button full color="secondary"
-          (click)="shareViaInstagram()">
-          Share on Instagram
-        </button>
-      </div>
-      <img [src]="base64Image" *ngIf="base64Image"/>
-      <!--<img src="{{base64Image}}"/> -->
-      <!--<img id="camera-image"/> -->
+    <ion-col>
+      <ion-icon
+        class="icon-size"
+        name="logo-instagram"
+        (click)="shareViaInstagram()">
+      </ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-icon
+        name="logo-twitter"
+        class="icon-size">
+      </ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-icon
+        name="md-text"
+        class="icon-size">
+      </ion-icon>
     </ion-col>
   </ion-row>
+  <ion-row>
+  </ion-row>
+  <img [src]="base64Image" *ngIf="base64Image"/>
+  <!--<img src="{{base64Image}}"/> -->
+  <!--<img id="camera-image"/> -->
   <ion-row>
     <ion-col>
       <button

@@ -67,7 +67,7 @@ export class CameraPage {
   // TO DO:  add a social sharing button here using base64Image,
   // check Ionic documentation on how to do it
   shareViaInstagram(){
-    this.socialSharing.shareViaInstagram(this.text, this.base64Image).then(() =>{
+    this.socialSharing.shareViaInstagram('I used MotivateMe app to share this picture!', this.base64Image).then(() =>{
       console.log('Shared!');
     }).catch((error: any) => {
       console.error(error)
