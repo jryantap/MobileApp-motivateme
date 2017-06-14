@@ -11,6 +11,7 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
 export class CameraPage {
   base64Image: string;
   hasTakenPicture: boolean = false;
+  //this will be an array of string that will be shown after user picture is displayed on the template
   messages: string[] =['YOU LOOK GREAT!', 'YOU ALWAYS LOOK GREAT', 'SO COOL!',
                        'LOOK OUT WORLD!', 'GREAT SENSE OF STYLE!', 'YOU ARE ENOUGH',
                        'YOU\'RE ONE OF A KIND','YOU\'RE INSPIRING!', 'FLATTER YOURSELF!'];

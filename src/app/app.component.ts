@@ -18,13 +18,13 @@ export class MyApp {
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
               private menuCtrl: MenuController){
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
     });
   }
 
+  //onClick nav contoller method for menu page direct
+  //take current on click item to destination page
   loadPage(page: any)
   {
     this.nav.setRoot(page);

@@ -1,3 +1,4 @@
+/* quotes data to be used in quotes template */
 export default [
   {
     //default = [{category, quotes[{id, person, text}], icon}]
