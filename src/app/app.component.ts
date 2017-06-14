@@ -20,12 +20,17 @@ export class MyApp {
   homePage = HomePage;
   @ViewChild('nav') nav: NavController;
 
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
               private menuCtrl: MenuController, private admob: AdMob) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
 
+      /**
+       * Reference from Point Developer for the AdMob Code
+       * http://pointdeveloper.com/  Thanks
+       */
       //admob id and properties
       var admobid: AdMobType;
       if (/(android)/i.test(navigator.userAgent)) {
