@@ -15,9 +15,12 @@ export class CameraPage {
   hasTakenPicture: boolean = false;
 
   //this will be an array of string that will be shown after user picture is displayed on the template
-  messages: string[] =['YOU LOOK GREAT!', 'YOU ALWAYS LOOK GREAT', 'SO COOL!',
-                       'LOOK OUT WORLD!', 'GREAT SENSE OF STYLE!', 'YOU ARE ENOUGH',
-                       'YOU\'RE ONE OF A KIND','YOU\'RE INSPIRING!', 'FLATTER YOURSELF!'];
+  messages: string[] =['YOU LOOK GREAT!','YOU ALWAYS LOOK GREAT', 'SO COOL!','SO FRESH',
+                       'HAVE AN UPVOTE!','YOU ARE OUT OF THIS WORLD!', 'GREAT SENSE OF STYLE!',
+                       'YOU ARE ENOUGH', 'YOU\'RE ONE OF A KIND','YOU\'RE INSPIRING!',
+                       'EVERYONE IS PROUD OF YOU!', 'THE DAY IS BETTER BECAUSE YOU\'RE PART OF IT!',
+                       '+GOOGILLION LIKES ON THIS PIC!'
+                      ];
 
   constructor(
     private camera: Camera,
@@ -78,7 +81,7 @@ export class CameraPage {
   //twitter share button
   shareViaTwitter() {
     this.socialSharing.shareViaTwitter
-    ('I used MotivateMe app to share this picture!', this.base64Image, 'http://www.nerdetitan.com/')
+    ('I used MotivateMe app to share this picture!', this.base64Image, 'download it at: http://www.nerdetitan.com/')
       .then(() => {
       console.log('Shared!')
       }).catch((error: any) => {
@@ -87,7 +90,7 @@ export class CameraPage {
 
   //share to text
   shareViaWhatsApp(){
-    this.socialSharing.shareViaWhatsApp('I used MotivateMe app to share my picture!', this.base64Image, 'http://www.nerdetitan.com')
+    this.socialSharing.shareViaWhatsApp('I used MotivateMe app to share my picture!', this.base64Image, 'download it at: http://www.nerdetitan.com')
       .then(() => {
       console.log('Shared!');
       })
@@ -96,7 +99,7 @@ export class CameraPage {
   }
 
   shareToOtherApps(){
-    this.socialSharing.share('General Share',null, this.base64Image, 'http://www.nerdetitan.com')
+    this.socialSharing.share('I used MotivateMe app to share my picture!',null, this.base64Image, 'download it at: http://www.nerdetitan.com')
       .then(() =>{
       })
       .catch((error:any) =>{
