@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {NavController} from "ionic-angular";
+import {AdMob} from '@ionic-native/admob';
 
 
 @Component({
@@ -7,5 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AboutPage {
 
+  constructor(public navCtrl: NavController, private admob: AdMob){}
 
+  ionViewDidLoad(){
+      if(AdMob) this.admob.showInterstitial();
+  }
 }
