@@ -18,6 +18,14 @@ export class CutePicsPage {
     'assets/animpics/anim-7.jpg',
     'assets/animpics/anim-8.jpg',
     'assets/animpics/anim-9.jpeg',
+    'assets/animpics/top-1.jpg',
+    'assets/animpics/top-2.jpg',
+    'assets/animpics/top-3.jpg',
+    'assets/animpics/top-4.jpg',
+    'assets/animpics/top-5.jpg',
+    'assets/animpics/top-6.jpg',
+    'assets/animpics/top-7.jpg',
+    'assets/animpics/top-9.jpg',
   ];
   private currentPicture: string;
   private showAww: boolean = false;

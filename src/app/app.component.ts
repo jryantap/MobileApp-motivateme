@@ -6,7 +6,6 @@ import { HomePage } from '../pages/home/home';
 import {AboutPage} from "../pages/about/about";
 import {AdMob} from '@ionic-native/admob';
 
-
 interface AdMobType {
   banner: string,
   interstitial: string
@@ -20,8 +19,6 @@ export class MyApp {
   aboutPage = AboutPage;
   homePage = HomePage;
   @ViewChild('nav') nav: NavController;
-
-
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
               private menuCtrl: MenuController, private admob: AdMob) {
