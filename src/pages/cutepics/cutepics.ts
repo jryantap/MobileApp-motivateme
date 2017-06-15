@@ -26,6 +26,7 @@ export class CutePicsPage {
     'assets/animpics/top-6.jpg',
     'assets/animpics/top-7.jpg',
     'assets/animpics/top-9.jpg',
+    'assets/animpics/corgi-1.jpg'
   ];
   private currentPicture: string;
   private showAww: boolean = false;
