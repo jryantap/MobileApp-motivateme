@@ -23,7 +23,7 @@ import {AdMob} from '@ionic-native/admob';
     CameraPage,
     LibraryPage,
     CutePicsPage,
-    AboutPage
+    AboutPage,
 
   ],
   imports: [
