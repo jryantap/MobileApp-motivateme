@@ -51,13 +51,13 @@ export class MyApp {
       //show banner
       this.admob.createBanner({
         adId: admobid.banner,
-        isTesting: true,//comment this out before publishing the app
+        isTesting: false,
         position: admob.AD_POSITION.BOTTOM_CENTER,
         autoShow: true
       });
       this.admob.prepareInterstitial({
         adId: admobid.interstitial,
-        isTesting: true, //comment this out before publishing the app
+        isTesting: false,
         autoShow: false
       });
     });
