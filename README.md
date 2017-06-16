@@ -6,6 +6,9 @@ Update 2 - Added Instagram share.  I'm planning to add share to different social
 
 Update 3 - Figured out how to add different social share buttons -- Instagram, WhatsApp, or user preference.
 
+Update 4 - Added AdMob banner and interstitial on the app.  The banner won't be intrusive to the user since it's on bottom center
+           and interstitial only shows when user check the "about developer page".
+
 ## How to use this template
 
 ```bash
