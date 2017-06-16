@@ -1,8 +1,8 @@
 {
-    "name": "movtivateme",
+    "name": "motivateme",
     "version": "0.0.1",
-    "author": "Ionic Framework",
-    "homepage": "http://ionicframework.com/",
+    "author": "Jherico-Ryan Tapang",
+    "homepage": "http://nerdetitan.com/",
     "private": true,
     "scripts": {
         "clean": "ionic-app-scripts clean",
