@@ -9,8 +9,8 @@ Update 3 - Figured out how to add different social share buttons -- Instagram, W
 Update 4 - Added AdMob banner and interstitial on the app.  The banner won't be intrusive to the user since it's on bottom center
            and interstitial only shows when user checks the "about developer page".
 
-Update 5 - Now available on Android's [Google Play](https://play.google.com/store/apps/details?id=com.nerdetitan.motivateme).  Coming 
-           soon for iOS AppStore.  
+Update 5 - Now available on Android's [Google Play](https://play.google.com/store/apps/details?id=com.nerdetitan.motivateme).  ~~~Coming 
+           soon for iOS AppStore.~~~ And now also on the [App Store](https://itunes.apple.com/us/app/motivate-you/id1249320215?ls=1&mt=8) 
 
 ## How to use this template
 
