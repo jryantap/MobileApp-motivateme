@@ -18,6 +18,8 @@ Update 4 - Added AdMob banner and interstitial on the app.  The banner won't be 
 
 Update 5 - Published on mobile. 
 
+Update 6 - Added a notes page with Firebase so user can save, retrieve and delete notes.  
+
 ------
 
 ## How to use this template

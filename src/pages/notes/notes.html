@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Your Thoughts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- ion card content -->
+<ion-content padding>
+
+  <!-- scroll throught cards -->
+  <ion-card *ngFor="let note of notes | async">
+    <ion-card-header>
+      <ion-card-title>
+        {{note.title}}
+      </ion-card-title>
+    </ion-card-header>
+
+    <div *ngIf="note.image != null" class="removable-image">
+      <button ion-button small color="dark" (click)="removeImage(note.$key, note.title, note.note)">
+        <ion-icon name="close"></ion-icon>
+      </button>
+      <img [src]="note.image" onerror="this.style.display='none'"/>
+    </div>
+
+    <ion-card-content>
+      {{note.note}}
+      <br><br>
+      <p text-right><i>{{showDate(note.date) | date: 'dd/MM/yyyy HH:mm'}}</i></p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear color="dark" (click)="updateNote(note.$key, note.title, note.note)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button ion-button clear color="dark" (click)="pickImage(note.$key, note.title, note.note, note.image)">
+          <ion-icon name="image"></ion-icon>
+        </button>
+        <button ion-button clear color="dark" (click)="shareNote(note.title, note.note, note.image)">
+          <ion-icon name="share"></ion-icon>
+        </button>
+        <button ion-button clear color="dark" (click)="removeNote(note.$key)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-fab bottom right>
+    <button ion-fab color="danger" (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
+
