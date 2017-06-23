@@ -13,6 +13,18 @@ import {CutePicsPage} from "../pages/cutepics/cutepics";
 import {AboutPage} from "../pages/about/about";
 import {SocialSharing} from "@ionic-native/social-sharing";
 import {AdMob} from '@ionic-native/admob';
+import { AngularFireModule } from 'angularfire2';
+
+
+//firebase configuration
+export const firebaseConfig = {
+  apiKey: "AIzaSyCBjcvotMF1iI2gcnMynYLbyG0TJtI8HQI",
+  authDomain: "addquotespage-motivateme.firebaseapp.com",
+  databaseURL: "https://addquotespage-motivateme.firebaseio.com",
+  projectId: "addquotespage-motivateme",
+  storageBucket: "addquotespage-motivateme.appspot.com",
+  messagingSenderId: "496795154329"
+};
 
 /* Add Pages here so Angular can detect them */
 @NgModule({
@@ -28,7 +40,8 @@ import {AdMob} from '@ionic-native/admob';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

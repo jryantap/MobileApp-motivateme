@@ -28,6 +28,7 @@
         "@ionic-native/splash-screen": "3.10.2",
         "@ionic-native/status-bar": "3.10.2",
         "@ionic/storage": "2.0.1",
+        "angularfire2": "^4.0.0-rc.1",
         "cordova-admob-sdk": "^0.7.0",
         "cordova-android": "^6.2.3",
         "cordova-browser": "^4.1.0",
@@ -39,6 +40,8 @@
         "cordova-plugin-console": "^1.0.7",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-extension": "^1.5.1",
+        "cordova-plugin-file": "^4.0.0",
+        "cordova-plugin-media-capture": "^1.4.3",
         "cordova-plugin-network-information": "^1.3.3",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.3",
@@ -46,6 +49,7 @@
         "cordova-plugin-x-socialsharing": "^5.1.8",
         "cordova-promise-polyfill": "0.0.2",
         "es6-promise-plugin": "^4.1.0",
+        "firebase": "^4.1.3",
         "ionic-angular": "3.3.0",
         "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
@@ -63,8 +67,8 @@
     "cordova": {
         "plugins": {
             "cordova-plugin-camera": {
-                "CAMERA_USAGE_DESCRIPTION": " ",
-                "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
+                "CAMERA_USAGE_DESCRIPTION": "App would like to use camera.",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": "App would like to use library."
             },
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
@@ -75,7 +79,10 @@
             "cordova-plugin-network-information": {},
             "cordova-plugin-x-socialsharing": {},
             "cordova-plugin-admob-free": {},
-            "cordova-plugin-admobpro": {}
+            "cordova-plugin-admobpro": {},
+            "cordova-plugin-media-capture": {
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": "App would like to access the library."
+            }
         },
         "platforms": [
             "android",
