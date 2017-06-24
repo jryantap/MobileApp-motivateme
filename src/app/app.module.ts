@@ -17,6 +17,8 @@ import { AngularFireModule } from 'angularfire2';
 import { ImagePicker } from '@ionic-native/image-picker'
 import {NotesPage} from "../pages/notes/notes";
 import {AngularFireDatabaseModule} from "angularfire2/database";
+import {IonicStorageModule} from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 
 
 //firebase configuration
@@ -46,6 +48,7 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    IonicStorageModule.forRoot(NotesPage)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

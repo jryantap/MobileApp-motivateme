@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
-import {ActionSheetController, AlertController, NavController} from "ionic-angular";
+import {ActionSheetController, AlertController, NavController, NavParams} from "ionic-angular";
 import {SocialSharing} from "@ionic-native/social-sharing";
 import {ImagePicker} from "@ionic-native/image-picker";
+import {Storage} from '@ionic/storage';
 @Component({
   selector: 'page-notes',
   templateUrl: 'notes.html',
@@ -12,16 +13,38 @@ export class NotesPage {
   //arraylist of Firebase
   notes: FirebaseListObservable<any[]>;
 
+  // notes = [];
+  // title: string;
+  // note: string;
+
   //constructor
   constructor(private navCtrl: NavController,
               private alertCtrl: AlertController,
               private actionSheetCtrl: ActionSheetController,
               angularfire: AngularFireDatabase,
               private socialSharing: SocialSharing,
-              private imagePicker: ImagePicker){
+              private imagePicker: ImagePicker,
+              private storage: Storage,
+              public navParams: NavParams) {
 
     this.notes = angularfire.list('/notes');
   }
+
+  // ionViewDidLoad(){
+  //   this.title = this.navParams.get('notes').note;
+  //   this.note = this.navParams.get('notes').note;
+  //
+  // }
+
+  // save(data){
+  //   let newData = JSON.stringify(data);
+  //   this.storage.set('notes', newData);
+  // }
+
+  // getData() {
+  //   return this.storage.get('notes');
+  // }
+
 
   //add note with alert controller
   addNote(){
@@ -56,6 +79,9 @@ export class NotesPage {
                 date: new Date().getDate()
               };
               this.notes.push(note);
+
+              // this.notes.push(note);
+              // this.save(note);
             }
           }
         ],
@@ -65,28 +91,28 @@ export class NotesPage {
   }
 
   //remove note
-  removeNote(noteId: string){
-    let prompt = this.alertCtrl.create(
-      {
-        title: "Delete you note",
-        message: "Do you really want to delete it?",
-        buttons:[
-          {
-            text: "Cancel",
-            handler: data => {
-              console.log("Cancel clicked");
-            }
-          },
-          {
-            text: "Delete",
-            handler: data => {
-              this.notes.remove(noteId);
-            }
-          }
-        ]
-      });
-    prompt.present();
-  }
+  // removeNote(noteId: string){
+  //   let prompt = this.alertCtrl.create(
+  //     {
+  //       title: "Delete you note",
+  //       message: "Do you really want to delete it?",
+  //       buttons:[
+  //         {
+  //           text: "Cancel",
+  //           handler: data => {
+  //             console.log("Cancel clicked");
+  //           }
+  //         },
+  //         {
+  //           text: "Delete",
+  //           handler: data => {
+  //             this.notes.remove(noteId);
+  //           }
+  //         }
+  //       ]
+  //     });
+  //   prompt.present();
+  // }
 
   //update Notes
   updateNote(noteId, noteTitle, noteContent){
@@ -127,79 +153,79 @@ export class NotesPage {
     prompt.present();
   }
 
-  /** TO DO: Image Picker, delete image, updateimage **/
+  /** FireBase open settings not working, so I rather send new quotes **/
 
-  pickImage(noteId, noteTitle, noteContent, previousImage){
-    this.imagePicker.getPictures({
-      maximumImagesCount: 1,
-      quality: 70,
-      outputType: 1
-    }).then((results) => {
-      if (results.length == 1) {
-        if (previousImage != null) {
-          let prompt = this.alertCtrl.create(
-            {
-              title: "Change image",
-              message: "Do you really want to change the image?",
-              buttons: [
-                {
-                  text: "Cancel",
-                  handler: data => {
-                    console.log('Cancel clicked');
-                  }
-                },
-                {
-                  text: "Change",
-                  handler: data => {
-                    this.updateImage(noteId, results[0]);
-                  }
-                }
-              ]
-            });
-          prompt.present();
-        } else {
-          this.updateImage(noteId, results[0]);
-        }
-
-      }
-    }, (err) => { });
-  }
-
-  updateImage(noteId, newImage) {
-    this.notes.update(noteId,
-    {
-      image: 'data:image/jpg;base64,' + newImage,
-      date: new Date().getTime()
-      });
-  }
-
-  removeImage(noteId, noteTitle, noteContent) {
-    let prompt = this.alertCtrl.create(
-      {
-        title: "Delete image",
-        message: "Do you really want do delete this image?",
-        buttons: [
-          {
-            text: "Cancel",
-            handler: data => {
-              console.log('Cancel clicked');
-            }
-          },
-          {
-            text: "Delete",
-            handler: data => {
-              this.notes.update(noteId,
-                {
-                  image: null,
-                  date: new Date().getDate()
-                });
-            }
-          }
-        ]
-      });
-    prompt.present();
-
-  }
+  // pickImage(noteId, noteTitle, noteContent, previousImage){
+  //   this.imagePicker.getPictures({
+  //     maximumImagesCount: 1,
+  //     quality: 70,
+  //     outputType: 1
+  //   }).then((results) => {
+  //     if (results.length == 1) {
+  //       if (previousImage != null) {
+  //         let prompt = this.alertCtrl.create(
+  //           {
+  //             title: "Change image",
+  //             message: "Do you really want to change the image?",
+  //             buttons: [
+  //               {
+  //                 text: "Cancel",
+  //                 handler: data => {
+  //                   console.log('Cancel clicked');
+  //                 }
+  //               },
+  //               {
+  //                 text: "Change",
+  //                 handler: data => {
+  //                   this.updateImage(noteId, results[0]);
+  //                 }
+  //               }
+  //             ]
+  //           });
+  //         prompt.present();
+  //       } else {
+  //         this.updateImage(noteId, results[0]);
+  //       }
+  //
+  //     }
+  //   }, (err) => { });
+  // }
+  //
+  // updateImage(noteId, newImage) {
+  //   this.notes.update(noteId,
+  //   {
+  //     image: 'data:image/jpg;base64,' + newImage,
+  //     date: new Date().getTime()
+  //     });
+  // }
+  //
+  // removeImage(noteId, noteTitle, noteContent) {
+  //   let prompt = this.alertCtrl.create(
+  //     {
+  //       title: "Delete image",
+  //       message: "Do you really want do delete this image?",
+  //       buttons: [
+  //         {
+  //           text: "Cancel",
+  //           handler: data => {
+  //             console.log('Cancel clicked');
+  //           }
+  //         },
+  //         {
+  //           text: "Delete",
+  //           handler: data => {
+  //             this.notes.update(noteId,
+  //               {
+  //                 image: null,
+  //                 date: new Date().getDate()
+  //               });
+  //           }
+  //         }
+  //       ]
+  //     });
+  //   prompt.present();
+  //
+  // }
 
   //shareNote
   shareNote(noteTitle, noteContent, noteImage){

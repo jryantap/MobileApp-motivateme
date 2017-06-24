@@ -1,13 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Your Thoughts
+    <ion-title align="center">
+     TYPE IT LOUD
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <!-- ion card content -->
 <ion-content padding>
+  <ion-card align-items-center>
+    <ion-card-content>
+      Share your thoughts to others anonymously... don't worry, no one will know...
+    </ion-card-content>
+  </ion-card>
 
   <!-- scroll throught cards -->
   <ion-card *ngFor="let note of notes | async">
@@ -27,22 +32,22 @@
     <ion-card-content>
       {{note.note}}
       <br><br>
-      <p text-right><i>{{showDate(note.date) | date: 'dd/MM/yyyy HH:mm'}}</i></p>
+      <!--<p text-right><i>{{showDate(note.date) | date: 'dd/MM/yyyy'}}</i></p>-->
     </ion-card-content>
     <ion-row no-padding>
       <ion-col>
-        <button ion-button clear color="dark" (click)="updateNote(note.$key, note.title, note.note)">
-          <ion-icon name="create"></ion-icon>
-        </button>
-        <button ion-button clear color="dark" (click)="pickImage(note.$key, note.title, note.note, note.image)">
-          <ion-icon name="image"></ion-icon>
-        </button>
+        <!--<button ion-button clear color="dark" (click)="updateNote(note.$key, note.title, note.note)">-->
+          <!--<ion-icon name="create"></ion-icon>-->
+        <!--</button>-->
+        <!--<button ion-button clear color="dark" (click)="pickImage(note.$key, note.title, note.note, note.image)">-->
+          <!--<ion-icon name="image"></ion-icon>-->
+        <!--</button>-->
         <button ion-button clear color="dark" (click)="shareNote(note.title, note.note, note.image)">
           <ion-icon name="share"></ion-icon>
         </button>
-        <button ion-button clear color="dark" (click)="removeNote(note.$key)">
-          <ion-icon name="trash"></ion-icon>
-        </button>
+        <!--<button ion-button clear color="dark" (click)="removeNote(note.$key)">-->
+          <!--<ion-icon name="trash"></ion-icon>-->
+        <!--</button>-->
       </ion-col>
     </ion-row>
   </ion-card>
