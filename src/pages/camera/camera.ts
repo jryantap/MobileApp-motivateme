@@ -45,8 +45,8 @@ export class CameraPage {
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       correctOrientation: true,
-      targetWidth: 500,
-      targetHeight: 500,
+      // targetWidth: 500,
+      // targetHeight: 500,
       saveToPhotoAlbum: false,
       allowEdit: false
     }
