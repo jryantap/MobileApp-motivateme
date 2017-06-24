@@ -25,6 +25,7 @@
 
   <!-- ion card starts here -->
   <ion-card *ngFor="let quote of fbquote | async">
+
     <ion-card-header>
       <ion-card-title>
         {{quote.title}}
@@ -40,8 +41,8 @@
 
     <ion-card-content>
       {{quote.note}}
-      <br><br>
-      <!--<p text-right><i>{{showDate(note.date) | date: 'dd/MM/yyyy'}}</i></p>-->
+      <!--<br><br>-->
+      <!--<p text-right><i>{{showDate(quote.date) | date: 'dd/MM/yyyy'}}</i></p>-->
     </ion-card-content>
     <ion-row no-padding>
       <ion-col>

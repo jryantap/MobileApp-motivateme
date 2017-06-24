@@ -18,7 +18,7 @@ import { ImagePicker } from '@ionic-native/image-picker'
 import {NotesPage} from "../pages/notes/notes";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {IonicStorageModule} from '@ionic/storage';
-import {UpdatedquotesPage} from "../pages/updatedquotes/updatedquotes";
+
 
 
 // //firebase configuration
@@ -52,7 +52,6 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
-    UpdatedquotesPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +73,6 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
-    UpdatedquotesPage
 
   ],
   providers: [

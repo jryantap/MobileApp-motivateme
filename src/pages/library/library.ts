@@ -25,4 +25,8 @@ export class LibraryPage implements OnInit {
   ngOnInit() {
     this.quoteCollection = quotes;
   }
+
+  showDate(date){
+    return new Date(date);
+  }
 }
