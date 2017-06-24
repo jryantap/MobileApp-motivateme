@@ -239,8 +239,4 @@ export class NotesPage {
   showDate(date){
     return new Date(date);
   }
-
-
-
-
 }

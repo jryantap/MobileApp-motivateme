@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import {AboutPage} from "../pages/about/about";
 import {AdMob} from '@ionic-native/admob';
+import firebase from 'firebase';
 
 interface AdMobType {
   banner: string,

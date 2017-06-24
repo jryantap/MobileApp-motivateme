@@ -18,18 +18,28 @@ import { ImagePicker } from '@ionic-native/image-picker'
 import {NotesPage} from "../pages/notes/notes";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {IonicStorageModule} from '@ionic/storage';
-import { Storage } from '@ionic/storage';
+import {UpdatedquotesPage} from "../pages/updatedquotes/updatedquotes";
 
 
-//firebase configuration
+// //firebase configuration
+// export const firebaseConfig = {
+//   apiKey: "AIzaSyCBjcvotMF1iI2gcnMynYLbyG0TJtI8HQI",
+//     authDomain: "addquotespage-motivateme.firebaseapp.com",
+//     databaseURL: "https://addquotespage-motivateme.firebaseio.com",
+//     projectId: "addquotespage-motivateme",
+//     storageBucket: "addquotespage-motivateme.appspot.com",
+//     messagingSenderId: "496795154329"
+// };
+
+//2nd firebase configuration
 export const firebaseConfig = {
-  apiKey: "AIzaSyCBjcvotMF1iI2gcnMynYLbyG0TJtI8HQI",
-    authDomain: "addquotespage-motivateme.firebaseapp.com",
-    databaseURL: "https://addquotespage-motivateme.firebaseio.com",
-    projectId: "addquotespage-motivateme",
-    storageBucket: "addquotespage-motivateme.appspot.com",
-    messagingSenderId: "496795154329"
-};
+  apiKey: "AIzaSyAsuGlcAnjbD_b8_QbqIUAJESPXbd2bpIg",
+  authDomain: "notes-5fb1c.firebaseapp.com",
+  databaseURL: "https://notes-5fb1c.firebaseio.com",
+  projectId: "notes-5fb1c",
+  storageBucket: "notes-5fb1c.appspot.com",
+  messagingSenderId: "1080898833537"
+}
 
 /* Add Pages here so Angular can detect them */
 @NgModule({
@@ -42,13 +52,17 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
+    UpdatedquotesPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    // AngularFireModule.initializeApp(firebaseConfig
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    IonicStorageModule.forRoot(NotesPage)
+    IonicStorageModule.forRoot(NotesPage),
+    IonicStorageModule.forRoot(LibraryPage)
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,7 +74,7 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
-
+    UpdatedquotesPage
 
   ],
   providers: [

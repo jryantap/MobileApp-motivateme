@@ -6,6 +6,7 @@ import {Quote} from "../../data/quotes.interface";
 import {LibraryPage} from "../library/library";
 import {CutePicsPage} from "../cutepics/cutepics";
 import {NotesPage} from "../notes/notes";
+import {UpdatedquotesPage} from "../updatedquotes/updatedquotes";
 
 @Component({
   selector: 'page-home',
@@ -20,6 +21,7 @@ export class HomePage implements OnInit {
   toLibraryPage = LibraryPage;
   toCutePicsPage = CutePicsPage;
   toNotesPage = NotesPage;
+  toUpdatedquotesPage = UpdatedquotesPage;
 
   //pass quote data component
   ngOnInit(){

@@ -17,6 +17,13 @@
   </ion-card>
 
   <ion-card
+    [navPush]="toNotesPage">
+    <img src="assets/anime-4.JPG">
+    <div class="card-title">MY QUOTES</div>
+    <div class="card-subtitle"> </div>
+  </ion-card>
+
+  <ion-card
     [navPush]="toLibraryPage"
     [navParams] = "quoteCollection">
     <img src="assets/anime-1.JPG">
@@ -32,10 +39,12 @@
   </ion-card>
 
   <ion-card
-    [navPush]="toNotesPage">
-    <img src="assets/anime-4.JPG">
-    <div class="card-title">MY QUOTES</div>
+    [navPush]="toUpdatedquotesPage">
+    <img src="assets/anime-2.JPG">
+    <div class="card-title">DAILY MOTIVATION</div>
     <div class="card-subtitle"> </div>
   </ion-card>
+
+
 
 </ion-content>
