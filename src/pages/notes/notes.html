@@ -7,16 +7,16 @@
 </ion-header>
 
 <!-- ion card content -->
-<ion-content padding>
+<ion-content padding class="cardcontent">
   <ion-card>
-    <ion-card-content>
+    <ion-card-content class="warning">
       <small>Share your thoughts to others anonymously... don't worry, no one will know...
         (just be careful on what you share!)</small>
     </ion-card-content>
   </ion-card>
 
   <!-- ion card starts here -->
-  <ion-card *ngFor="let note of notes | async">
+  <ion-card *ngFor="let note of notes | async" class="theirquotes">
     <ion-card-header>
       <ion-card-title>
         {{note.title}}
@@ -54,7 +54,7 @@
   </ion-card>
 
   <ion-fab bottom right>
-    <button ion-fab color="danger" (click)="addNote()">
+    <button ion-fab color="secondary" (click)="addNote()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
