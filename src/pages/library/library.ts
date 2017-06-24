@@ -3,6 +3,7 @@ import { Quote } from "../../data/quotes.interface";
 import quotes from '../../data/quotes';
 import { QuotesPage } from "../quotes/quotes";
 import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
+import {SocialSharing} from "@ionic-native/social-sharing";
 @Component({
   selector: 'page-library',
   templateUrl: 'library.html'
@@ -17,7 +18,7 @@ export class LibraryPage implements OnInit {
   toQuotesPage = QuotesPage;
 
   //constructor
-  constructor(angularfire: AngularFireDatabase) {
+  constructor(angularfire: AngularFireDatabase, private socialSharing: SocialSharing) {
     this.fbquote = angularfire.list('/fbquotes');
   }
 
@@ -28,5 +29,14 @@ export class LibraryPage implements OnInit {
 
   showDate(date){
     return new Date(date);
+  }
+
+  //shareNote
+  shareNote(noteTitle, noteContent, noteImage){
+    this.socialSharing.share(noteTitle, noteTitle, noteImage, "\n" + noteContent).then(()=>{
+      console.log("Note Shared succesfully.");
+    }).catch(() =>{
+      console.log("It was not shared.");
+    });
   }
 }
