@@ -23,10 +23,14 @@
     </button>
   </ion-list>
 
+  <!-- top header -->
+
+
   <!-- ion card starts here -->
   <ion-card *ngFor="let quote of fbquote | async" class="contentcard">
 
     <ion-card-header>
+      <small>This quote gets updated everyday!</small>
       <ion-card-title>
         {{quote.title}}
       </ion-card-title>
