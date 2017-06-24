@@ -18,7 +18,8 @@ Update 4 - Added AdMob banner and interstitial on the app.  The banner won't be 
 
 Update 5 - Published on mobile. 
 
-Update 6 - Added a notes page with Firebase so user can save, retrieve and delete notes.  
+Update 6 - Added a user share thoughts page using Firebase. (update not live/published yet). Also added a live quotes page that let me push
+           a new quote to the app so user can see it (not live yet).  
 
 ------
 
