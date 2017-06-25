@@ -33,7 +33,7 @@ export class LibraryPage implements OnInit {
 
   //shareNote
   shareNote(noteTitle, noteContent, noteImage){
-    this.socialSharing.share(noteContent, noteTitle, noteImage, "\n" + noteContent).then(()=>{
+    this.socialSharing.share(noteTitle, noteTitle, noteImage, "\n" + noteContent).then(()=>{
       console.log("Note Shared succesfully.");
     }).catch(() =>{
       console.log("It was not shared.");
