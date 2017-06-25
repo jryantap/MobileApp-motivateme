@@ -20,3 +20,18 @@
   background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+.mainquote{
+  font-weight: bold;
+}
+
+.author {
+  text-align: right;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+
+  &:before {
+    content: ' -';
+  }
+}

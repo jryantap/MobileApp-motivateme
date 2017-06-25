@@ -31,20 +31,21 @@
 
     <ion-card-header>
       <small>This quote gets updated everyday!</small>
-      <ion-card-title>
-        {{quote.title}}
-      </ion-card-title>
+      <!--<ion-card-title>-->
+        <!--{{quote.title}}-->
+      <!--</ion-card-title>-->
     </ion-card-header>
 
-    <div *ngIf="fbquote.image != null" class="removable-image">
-      <button ion-button small color="dark" (click)="removeImage(fbquote.$key, fbquote.title, fbquote.note)">
-        <ion-icon name="close"></ion-icon>
-      </button>
-      <img [src]="fbquote.image" onerror="this.style.display='none'"/>
-    </div>
+    <!--<div *ngIf="fbquote.image != null" class="removable-image">-->
+      <!--<button ion-button small color="dark" (click)="removeImage(fbquote.$key, fbquote.title, fbquote.note)">-->
+        <!--<ion-icon name="close"></ion-icon>-->
+      <!--</button>-->
+      <!--<img [src]="fbquote.image" onerror="this.style.display='none'"/>-->
+    <!--</div>-->
 
     <ion-card-content>
-      {{quote.note}}
+      <h2 class="mainquote">{{quote.note}}</h2>
+      <p class="author">{{quote.title}}</p>
     </ion-card-content>
     <ion-row no-padding>
       <ion-col>
