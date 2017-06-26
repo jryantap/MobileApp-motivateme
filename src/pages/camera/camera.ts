@@ -17,7 +17,7 @@ export class CameraPage {
   //this will be an array of string that will be shown after user picture is displayed on the template
   messages: string[] =['YOU LOOK GREAT!','YOU ALWAYS LOOK GREAT', 'SO COOL!','SO FRESH',
                        'HAVE AN UPVOTE!','YOU ARE OUT OF THIS WORLD!', 'GREAT SENSE OF STYLE!',
-                       'YOU ARE ENOUGH', 'YOU\'RE ONE OF A KIND','YOU\'RE INSPIRING!',
+                       'WOW SO PERFECT!', 'YOU\'RE ONE OF A KIND','YOU\'RE INSPIRING!',
                        'EVERYONE IS PROUD OF YOU!', 'THE DAY IS BETTER BECAUSE YOU\'RE PART OF IT!',
                        '+GOOGILLION LIKES ON THIS PIC!'
                       ];
