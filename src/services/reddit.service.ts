@@ -14,7 +14,7 @@ export class RedditService{
 
   //get post from reddit api, adding category for now since I may add more subreddits later
   getPost(category, limit){
-    return this.http.get(this.url +'/' + category + '/top.json?limit=' + limit).map(res => res.json());
+    return this.http.get(this.url +'/' + category + '/hot.json?limit=' + limit).map(res => res.json());
   }
 
 }
