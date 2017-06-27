@@ -21,18 +21,18 @@
           style="align-items: center">
         </div>
       </div>
+      <ion-row>
+        <ion-col>
+          <div>
+            <!--<h3 *ngIf="showAww" align="center">Go to <a href="http://www.reddit.com/r/aww">/r/aww</a> for more!</h3>-->
+            <button ion-button *ngIf="showAww" full round [navPush]="toRedditPage">Go to /r/Aww for more!</button>
+          </div>
+        </ion-col>
+      </ion-row>
       <div>
         <!-- click button to get random pictures from ts component arraylist -->
         <button ion-button full block (click)="onClickThis()">JUST SMILE A LITTLE </button>
         </div>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <div>
-        <!--<h3 *ngIf="showAww" align="center">Go to <a href="http://www.reddit.com/r/aww">/r/aww</a> for more!</h3>-->
-        <button ion-button *ngIf="showAww" full round [navPush]="toRedditPage">Go to /r/Aww for more!</button>
-      </div>
     </ion-col>
   </ion-row>
 </ion-content>

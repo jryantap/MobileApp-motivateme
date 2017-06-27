@@ -28,7 +28,7 @@ export class CutePicsPage {
     'assets/animpics/top-5.JPG',
     'assets/animpics/top-6.JPG',
     'assets/animpics/top-7.JPG',
-    'assets/animpics/top-9.JPG',
+    'assets/animpics/top-8.JPG',
     'assets/animpics/corgi-1.jpg'
   ];
   private currentPicture: string;
