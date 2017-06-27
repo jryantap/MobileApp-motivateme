@@ -10,35 +10,30 @@
     <img *ngIf="item.preview.images[0].source.url" src="{{item.preview.images[0].source.url}}"/>
 
     <ion-card-content>
-      {{item.title}}
+      <ion-card-title>
+        {{item.title}}
+     </ion-card-title>
+
+      <ion-list>
+        <ion-item>
+          <ion-icon small name="person" item-left></ion-icon>Author
+          <ion-note item-right>{{item.author}}</ion-note>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon small name="thumbs-up" item-left></ion-icon>Score
+          <ion-note item-right>({{item.score}}</ion-note>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon small name="chatboxes" item-left></ion-icon>Comments
+          <ion-note item-right>{{item.num_comments}}</ion-note>
+        </ion-item>
+
+        <a ion-button small target="_blank" href="https://www.reddit.com/{{item.permalink}}">View More...</a>
+     </ion-list>
+
     </ion-card-content>
 
-    <ion-list>
-
-      <ion-item>
-        <ion-icon name="person" item-left></ion-icon>Author
-        <ion-note item-right>{{item.author}}</ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon name="thumbs-up" item-left></ion-icon>Score
-        <ion-note item-right>({{item.score}}</ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon name="chatboxes" item-left></ion-icon>
-      </ion-item>
-    </ion-list>
-
-
-
-
-
-
-
-
-
-
   </ion-card>
-
 </ion-content>

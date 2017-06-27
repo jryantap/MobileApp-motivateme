@@ -20,6 +20,7 @@ import {AngularFireDatabaseModule} from "angularfire2/database";
 import {IonicStorageModule} from '@ionic/storage';
 import {RedditPage} from "../pages/reddit/reddit";
 import {Http, HttpModule} from "@angular/http";
+import {DetailsPage} from "../pages/details/details";
 
 
 
@@ -55,7 +56,8 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
-    RedditPage
+    RedditPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
-    RedditPage
+    RedditPage,
+    DetailsPage
 
   ],
   providers: [
