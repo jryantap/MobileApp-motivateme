@@ -5,6 +5,7 @@ import {SocialSharing} from "@ionic-native/social-sharing";
 import {ImagePicker} from "@ionic-native/image-picker";
 import {Storage} from '@ionic/storage';
 import {RedditPage} from "../reddit/reddit";
+import {EulaPage} from "../eula/eula";
 @Component({
   selector: 'page-notes',
   templateUrl: 'notes.html',
@@ -13,6 +14,11 @@ export class NotesPage {
 
   //arraylist of Firebase
   notes: FirebaseListObservable<any[]>;
+
+  toEulaPage = EulaPage;
+  flagCounter: number = 0;
+  isFlagged: boolean = false;
+
 
   // notes = [];
   // title: string;
@@ -239,5 +245,14 @@ export class NotesPage {
 
   showDate(date){
     return new Date(date);
+  }
+
+  noteIsFlagged(noteId){
+    this.isFlagged = true;
+    this.flagCounter+=1;
+    if(this.flagCounter == 3){
+      this.notes.remove(noteId);
+    }
+    console.log(this.flagCounter);
   }
 }

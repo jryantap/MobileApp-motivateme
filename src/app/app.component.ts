@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import {AboutPage} from "../pages/about/about";
 import {AdMob} from '@ionic-native/admob';
 import {RedditService} from "../services/reddit.service";
+import {EulaPage} from "../pages/eula/eula";
 
 interface AdMobType {
   banner: string,
@@ -20,6 +21,7 @@ export class MyApp {
   rootPage:any = HomePage;
   aboutPage = AboutPage;
   homePage = HomePage;
+  eulaPage = EulaPage;
   @ViewChild('nav') nav: NavController;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,

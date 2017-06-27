@@ -10,8 +10,20 @@
 <ion-content padding class="cardcontent">
   <ion-card>
     <ion-card-content class="warning">
-      <small>Share your thoughts to others anonymously to other users of this app... don't worry, no one will know...
-        (just don't share personal info!)</small>
+      Share your thoughts to others anonymously to other users of this app... don't worry, no one will know.
+      (Don't share personal info and/or share objectionable content.
+      <ion-row>
+        <ion-col>
+
+          <button
+            ion-button
+            small
+            block
+            [navPush]="toEulaPage">FIND OUT MORE
+          </button>
+        </ion-col>
+      </ion-row>
+
     </ion-card-content>
   </ion-card>
 
@@ -43,12 +55,18 @@
         <!--<button ion-button clear color="dark" (click)="pickImage(note.$key, note.title, note.note, note.image)">-->
           <!--<ion-icon name="image"></ion-icon>-->
         <!--</button>-->
-        <button ion-button clear color="primary" (click)="shareNote(note.title, note.note, note.image)">
+        <button ion-button
+                clear
+                color="primary"
+                (click)="shareNote(note.title, note.note, note.image)">
           <ion-icon name="share"></ion-icon>
         </button>
-        <!--<button ion-button clear color="dark" (click)="removeNote(note.$key)">-->
-          <!--<ion-icon name="trash"></ion-icon>-->
-        <!--</button>-->
+        <button
+            ion-button
+            clear
+            color="dark" (click)="noteIsFlagged(note.$key)">
+          <ion-icon name="md-flag"></ion-icon>
+        </button>
       </ion-col>
     </ion-row>
   </ion-card>

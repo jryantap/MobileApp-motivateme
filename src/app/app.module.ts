@@ -21,6 +21,7 @@ import {IonicStorageModule} from '@ionic/storage';
 import {RedditPage} from "../pages/reddit/reddit";
 import {Http, HttpModule} from "@angular/http";
 import {DetailsPage} from "../pages/details/details";
+import {EulaPage} from "../pages/eula/eula";
 
 
 
@@ -57,7 +58,8 @@ export const firebaseConfig = {
     AboutPage,
     NotesPage,
     RedditPage,
-    DetailsPage
+    DetailsPage,
+    EulaPage
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,8 @@ export const firebaseConfig = {
     AboutPage,
     NotesPage,
     RedditPage,
-    DetailsPage
+    DetailsPage,
+    EulaPage
 
   ],
   providers: [
