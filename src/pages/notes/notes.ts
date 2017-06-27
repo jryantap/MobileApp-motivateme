@@ -4,7 +4,6 @@ import {ActionSheetController, AlertController, NavController, NavParams} from "
 import {SocialSharing} from "@ionic-native/social-sharing";
 import {ImagePicker} from "@ionic-native/image-picker";
 import {Storage} from '@ionic/storage';
-import {RedditPage} from "../reddit/reddit";
 import {EulaPage} from "../eula/eula";
 @Component({
   selector: 'page-notes',
