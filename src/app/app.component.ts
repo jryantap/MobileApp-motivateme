@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import {AboutPage} from "../pages/about/about";
 import {AdMob} from '@ionic-native/admob';
+import {RedditService} from "../services/reddit.service";
 
 interface AdMobType {
   banner: string,
@@ -12,7 +13,8 @@ interface AdMobType {
 }
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers: [RedditService]
 })
 export class MyApp {
   rootPage:any = HomePage;

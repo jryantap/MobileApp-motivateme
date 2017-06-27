@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {RedditPage} from "../reddit/reddit";
 
 @Component({
   selector: 'page-cutepics',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 
 export class CutePicsPage {
+  toRedditPage = RedditPage;
+
   //set different local pics to array
   private pics: Array<any> = [
     'assets/animpics/anim-1.jpg',
@@ -32,6 +35,8 @@ export class CutePicsPage {
   private showAww: boolean = false;
   private counter: number = 0;
   private notClickedYet: boolean = true;
+
+
 
 
   //this will randomize the array numbers

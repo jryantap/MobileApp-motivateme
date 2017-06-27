@@ -18,6 +18,9 @@ import { ImagePicker } from '@ionic-native/image-picker'
 import {NotesPage} from "../pages/notes/notes";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {IonicStorageModule} from '@ionic/storage';
+import {RedditPage} from "../pages/reddit/reddit";
+import {Http, HttpModule} from "@angular/http";
+
 
 
 
@@ -52,6 +55,7 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
+    RedditPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     IonicStorageModule.forRoot(NotesPage),
-    IonicStorageModule.forRoot(LibraryPage)
+    IonicStorageModule.forRoot(LibraryPage),
+    HttpModule
 
   ],
   bootstrap: [IonicApp],
@@ -73,6 +78,7 @@ export const firebaseConfig = {
     CutePicsPage,
     AboutPage,
     NotesPage,
+    RedditPage
 
   ],
   providers: [
@@ -83,6 +89,7 @@ export const firebaseConfig = {
     ImagePicker,
     AdMob,
     AngularFireModule,
+    HttpModule,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

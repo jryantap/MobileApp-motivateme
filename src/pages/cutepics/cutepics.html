@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color = "primary">
     <ion-title align="center">SMILE</ion-title>
   </ion-navbar>
 </ion-header>
@@ -30,7 +30,8 @@
   <ion-row>
     <ion-col>
       <div>
-        <h3 *ngIf="showAww" align="center">Go to <a href="http://www.reddit.com/r/aww">/r/aww</a> for more!</h3>
+        <!--<h3 *ngIf="showAww" align="center">Go to <a href="http://www.reddit.com/r/aww">/r/aww</a> for more!</h3>-->
+        <button ion-button *ngIf="showAww" full round [navPush]="toRedditPage">Go to /r/Aww for more!</button>
       </div>
     </ion-col>
   </ion-row>
