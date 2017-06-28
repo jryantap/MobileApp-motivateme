@@ -126,7 +126,7 @@ export class NotesPage implements OnInit{
   //   prompt.present();
   // }
 
-  //update Notes
+  //update Notes may need not used
   updateNote(noteId, noteTitle, noteContent){
     let prompt = this.alertCtrl.create(
       {
