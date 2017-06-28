@@ -9,7 +9,9 @@ import {AdMob} from '@ionic-native/admob';
 export class AboutPage {
   myWebSite: any;
 
-  constructor(public navCtrl: NavController, private admob: AdMob, private platform: Platform){}
+  constructor(public navCtrl: NavController, private admob: AdMob, private platform: Platform){
+
+  }
 
   ionViewDidLoad(){
       if(AdMob) this.admob.showInterstitial();

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NavController} from "ionic-angular";
 import {RedditService} from "../../services/reddit.service";
 import {DetailsPage} from "../details/details";
+import { AdMob } from "@ionic-native/admob";
 
 @Component({
   selector: 'page-reddit',
@@ -13,7 +14,8 @@ export class RedditPage {
   category: any;
   limit: any;
 
-  constructor(public navCtrl: NavController, private redditService: RedditService){
+  constructor(public navCtrl: NavController, private redditService: RedditService,
+              private admob: AdMob){
     //adding getDefault since I may add more sub reddits later on
     this.getDefault();
   }
@@ -45,6 +47,11 @@ export class RedditPage {
   //may need later
   changeCategory(){
     this.getPosts(this.category, this.limit);
+  }
+
+  //for ads
+  ionViewDidLoad(){
+    if(AdMob) this.admob.showInterstitial();
   }
 
 }

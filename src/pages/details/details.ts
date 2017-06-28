@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {NavParams} from "ionic-angular";
+import {NavController, NavParams, Platform} from "ionic-angular";
+import {AdMob} from '@ionic-native/admob';
 
 @Component({
   selector: 'page-details',
@@ -9,8 +10,9 @@ export class DetailsPage {
 
   item: any;
 
-  constructor(public navParams: NavParams){
+  constructor(public navParams: NavParams, private admob: AdMob){
     this.item = this.navParams.get('item');
   }
+
 
 }

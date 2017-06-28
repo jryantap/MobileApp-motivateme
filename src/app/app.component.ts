@@ -53,12 +53,12 @@ export class MyApp {
         };
       }
       //show banner
-      // this.admob.createBanner({
-      //   adId: admobid.banner,
-      //   isTesting: false,
-      //   position: admob.AD_POSITION.BOTTOM_CENTER,
-      //   autoShow: true
-      // });
+      this.admob.createBanner({
+        adId: admobid.banner,
+        isTesting: false,
+        position: admob.AD_POSITION.BOTTOM_CENTER,
+        autoShow: true
+      });
       this.admob.prepareInterstitial({
         adId: admobid.interstitial,
         isTesting: false,
