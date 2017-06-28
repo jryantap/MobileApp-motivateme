@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
 import {ActionSheetController, AlertController, NavController, NavParams} from "ionic-angular";
 import {SocialSharing} from "@ionic-native/social-sharing";
@@ -9,7 +9,7 @@ import {EulaPage} from "../eula/eula";
   selector: 'page-notes',
   templateUrl: 'notes.html',
 })
-export class NotesPage {
+export class NotesPage implements OnInit{
 
   //arraylist of Firebase
   notes: FirebaseListObservable<any[]>;
@@ -27,13 +27,19 @@ export class NotesPage {
   constructor(private navCtrl: NavController,
               private alertCtrl: AlertController,
               private actionSheetCtrl: ActionSheetController,
-              angularfire: AngularFireDatabase,
+              private angularfire: AngularFireDatabase,
               private socialSharing: SocialSharing,
               private imagePicker: ImagePicker,
               private storage: Storage,
               public navParams: NavParams) {
 
-    this.notes = angularfire.list('/notes');
+
+  }
+
+  //load notes right away after initialization
+  ngOnInit(){
+    this.notes = this.angularfire.list('/notes');
+
   }
 
   // ionViewDidLoad(){

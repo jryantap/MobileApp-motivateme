@@ -18,13 +18,14 @@ export class LibraryPage implements OnInit {
   toQuotesPage = QuotesPage;
 
   //constructor
-  constructor(angularfire: AngularFireDatabase, private socialSharing: SocialSharing) {
-    this.fbquote = angularfire.list('/fbquotes');
+  constructor(private angularfire: AngularFireDatabase, private socialSharing: SocialSharing) {
+
   }
 
   //this function takes the quotes data and store them in quotesCollection object
   ngOnInit() {
     this.quoteCollection = quotes;
+    this.fbquote = this.angularfire.list('/fbquotes');
   }
 
   showDate(date){
