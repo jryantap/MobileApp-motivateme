@@ -1,44 +1,47 @@
 <ion-header>
-  <ion-navbar align="center">
+  <ion-navbar text-center color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>HI</ion-title>
+    <ion-title>HELLO</ion-title>
   </ion-navbar>
-</ion-header>
+  </ion-header>
 
 
 <!-- link cards to other pages -->
 <ion-content class="card-background-page">
-  <ion-card [navPush]="toCameraPage">
-    <img src="assets/anime-3.JPG">
-    <div class="card-title">I ROCK!</div>
-    <div class="card-subtitle">   </div>
-  </ion-card>
 
-  <ion-card
-    [navPush]="toNotesPage">
-    <img src="assets/anime-4.JPG">
-    <div class="card-title">TYPE IT LOUD</div>
-    <div class="card-subtitle"> </div>
-  </ion-card>
+  <img style="display: block" src="assets/anime-3.JPG" [navPush]="toCameraPage">
+  <img style="display: block" src="assets/anime-4.JPG" [navPush]="toNotesPage">
+  <img style="display: block" src="assets/anime-1.JPG" [navPush]="toLibraryPage" [navParams]="quoteCollection">
+  <img style="display: block" src="assets/anime-2.JPG" [navPush]="toCutePicsPage">
 
-  <ion-card
-    [navPush]="toLibraryPage"
-    [navParams] = "quoteCollection">
-    <img src="assets/anime-1.JPG">
-    <div class="card-title"> HAVE A NICE DAY!</div>
-    <div class="card-subtitle"> </div>
-  </ion-card>
+  <!--<ion-card [navPush]="toCameraPage">-->
+    <!--<img src="assets/anime-3.JPG">-->
+    <!--<div class="card-title">I ROCK!</div>-->
+    <!--<div class="card-subtitle">   </div>-->
+  <!--</ion-card>-->
 
-  <ion-card
-    [navPush]="toCutePicsPage">
-    <img src="assets/anime-2.JPG">
-    <div class="card-title">LIFE IS GOOD</div>
-    <div class="card-subtitle"> </div>
-  </ion-card>
+  <!--<ion-card-->
+    <!--[navPush]="toNotesPage">-->
+    <!--<img src="assets/anime-4.JPG">-->
+    <!--<div class="card-title">TYPE IT LOUD</div>-->
+    <!--<div class="card-subtitle"> </div>-->
+  <!--</ion-card>-->
 
+  <!--<ion-card-->
+    <!--[navPush]="toLibraryPage"-->
+    <!--[navParams] = "quoteCollection">-->
+    <!--<img src="assets/anime-1.JPG">-->
+    <!--<div class="card-title"> HAVE A NICE DAY!</div>-->
+    <!--<div class="card-subtitle"> </div>-->
+  <!--</ion-card>-->
 
-
+  <!--<ion-card-->
+    <!--[navPush]="toCutePicsPage">-->
+    <!--<img src="assets/anime-2.JPG">-->
+    <!--<div class="card-title">LIFE IS GOOD</div>-->
+    <!--<div class="card-subtitle"> </div>-->
+  <!--</ion-card>-->
 
 </ion-content>
