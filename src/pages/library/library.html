@@ -10,7 +10,7 @@
 </ion-header>
 
 <!-- get each quote data from file and display them in a list using ionic-list -->
-<ion-content padding class="library-page">
+<ion-content padding>
 
   <!--<ion-refresher (ionRefresh)="doRefresh($event)">-->
     <!--<ion-refresher-content-->
@@ -38,6 +38,7 @@
   <!-- ion card starts here -->
   <!--<small>pull down to refresh</small>-->
   <ion-card *ngFor="let quote of fbquotes | async" class="contentcard">
+    <small>This quote gets updated everyday!</small>
 
     <ion-card-header>
       <!--<ion-card-title>-->
@@ -45,6 +46,7 @@
       <!--</ion-card-title>-->
       {{quote.title}}
     </ion-card-header>
+
 
     <ion-card-content [innerHtml]=quote.note></ion-card-content>
 
@@ -55,31 +57,23 @@
             <ion-icon class="share-icon" name="md-share"></ion-icon>
           </button>
         </ion-col>
-        <ion-col>
-          <button ion-button icon-only (click)="twitterShare(i)" color="primary" clear>
-            <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
-          </button>
-        </ion-col>
-        <ion-col>
-          <button ion-button icon-only (click)="whatsappShare(i)" color="primary" clear>
-            <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
-          </button>
-        </ion-col>
-        <ion-col>
-          <button ion-button icon-only (click)="facebookShare(i)" color="primary" clear>
-            <ion-icon class="share-icon" name="logo-facebook"></ion-icon>
-          </button>
-        </ion-col>
+        <!--<ion-col>-->
+          <!--<button ion-button icon-only (click)="twitterShare(i)" color="primary" clear>-->
+            <!--<ion-icon class="share-icon" name="logo-twitter"></ion-icon>-->
+          <!--</button>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<button ion-button icon-only (click)="whatsappShare(i)" color="primary" clear>-->
+            <!--<ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>-->
+          <!--</button>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<button ion-button icon-only (click)="facebookShare(i)" color="primary" clear>-->
+            <!--<ion-icon class="share-icon" name="logo-facebook"></ion-icon>-->
+          <!--</button>-->
+        <!--</ion-col>-->
       </ion-row>
     </ion-grid>
-
-
-    <!--<div *ngregQuotesuote.image != null" class="removable-image">-->
-      <!--<button ion-button small color="dark" (click)="removeImregQuotesuote.$kregQuotesuote.titregQuotesuote.note)">-->
-        <!--<ion-icon name="close"></ion-icon>-->
-      <!--</button>-->
-      <!--<iregQuotes]="fbquote.image" onerror="this.style.display='none'"/>-->
-    <!--</div>-->
 
     <!--<ion-card-content>-->
       <!--<h2 class="mainquote">{{quote.note}}</h2>-->

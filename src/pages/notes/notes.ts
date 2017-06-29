@@ -18,7 +18,6 @@ export class NotesPage implements OnInit{
   flagCounter: number = 0;
   isFlagged: boolean = false;
 
-
   // notes = [];
   // title: string;
   // note: string;
@@ -32,14 +31,11 @@ export class NotesPage implements OnInit{
               private imagePicker: ImagePicker,
               private storage: Storage,
               public navParams: NavParams) {
-
-
   }
 
   //load notes right away after initialization
   ngOnInit(){
     this.notes = this.angularfire.list('/notes');
-
   }
 
   // ionViewDidLoad(){
@@ -102,6 +98,38 @@ export class NotesPage implements OnInit{
     prompt.present();
   }
 
+  shareMessage(title, note): string {
+    var msg = title + " - " + note;
+    return msg.concat("\n sent from Motivate Me App!");
+  }
+
+  regularShare(title, note) {
+    var msg = this.shareMessage(title, note);
+    this.socialSharing.share(msg, null, null, null,);
+  }
+
+  showDate(date){
+    return new Date(date);
+  }
+
+  noteIsFlagged(noteId){
+    this.isFlagged = true;
+    this.flagCounter+=1;
+    if(this.flagCounter == 3){
+      this.notes.remove(noteId);
+    }
+    console.log(this.flagCounter);
+  }
+
+  //shareNote for iOS only
+  // shareNoteIos(noteTitle, noteContent){
+  //   this.socialSharing.share(noteContent, noteTitle).then(()=>{
+  //     console.log("Note Shared succesfully.");
+  //   }).catch(() =>{
+  //     console.log("It was not shared.");
+  //   });
+  // }
+
   //remove note
   // removeNote(noteId: string){
   //   let prompt = this.alertCtrl.create(
@@ -127,43 +155,43 @@ export class NotesPage implements OnInit{
   // }
 
   //update Notes may need not used
-  updateNote(noteId, noteTitle, noteContent){
-    let prompt = this.alertCtrl.create(
-      {
-        title: "Revise your thoughts",
-        message: "Update the data",
-        inputs: [
-          {
-            name: "title",
-            value: noteTitle
-          },
-          {
-          name: "note",
-          value: noteContent
-          }
-        ],
-
-        buttons: [
-          {
-            text: "Cancel",
-            handler: data => {
-              console.log("Cancel update");
-            }
-          },
-          {
-            text: "Save",
-            handler: data => {
-              this.notes.update(noteId,{
-                title: data.title,
-                note: data.notes,
-                date: new Date().getDate()
-              });
-            }
-          }
-        ]
-      });
-    prompt.present();
-  }
+  // updateNote(noteId, noteTitle, noteContent){
+  //   let prompt = this.alertCtrl.create(
+  //     {
+  //       title: "Revise your thoughts",
+  //       message: "Update the data",
+  //       inputs: [
+  //         {
+  //           name: "title",
+  //           value: noteTitle
+  //         },
+  //         {
+  //         name: "note",
+  //         value: noteContent
+  //         }
+  //       ],
+  //
+  //       buttons: [
+  //         {
+  //           text: "Cancel",
+  //           handler: data => {
+  //             console.log("Cancel update");
+  //           }
+  //         },
+  //         {
+  //           text: "Save",
+  //           handler: data => {
+  //             this.notes.update(noteId,{
+  //               title: data.title,
+  //               note: data.notes,
+  //               date: new Date().getDate()
+  //             });
+  //           }
+  //         }
+  //       ]
+  //     });
+  //   prompt.present();
+  // }
 
   /** FireBase open settings not working, so I rather send new quotes **/
 
@@ -240,24 +268,13 @@ export class NotesPage implements OnInit{
   // }
 
   //shareNote
-  shareNote(noteTitle, noteContent, noteImage){
-    this.socialSharing.share(noteTitle, noteTitle, noteImage, "\n" + noteContent).then(()=>{
-      console.log("Note Shared succesfully.");
-    }).catch(() =>{
-      console.log("It was not shared.");
-    });
-  }
+  // shareNote(noteTitle, noteContent, noteImage){
+  //   this.socialSharing.share(noteTitle, noteTitle, noteImage, "\n" + noteContent).then(()=>{
+  //     console.log("Note Shared succesfully.");
+  //   }).catch(() =>{
+  //     console.log("It was not shared.");
+  //   });
+  // }
 
-  showDate(date){
-    return new Date(date);
-  }
 
-  noteIsFlagged(noteId){
-    this.isFlagged = true;
-    this.flagCounter+=1;
-    if(this.flagCounter == 3){
-      this.notes.remove(noteId);
-    }
-    console.log(this.flagCounter);
-  }
 }

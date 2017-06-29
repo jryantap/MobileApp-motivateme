@@ -21,54 +21,50 @@
             block
             [navPush]="toEulaPage">FIND OUT MORE
           </button>
+
         </ion-col>
       </ion-row>
-
     </ion-card-content>
   </ion-card>
 
   <!-- ion card starts here -->
   <ion-card *ngFor="let note of notes | async" class="theirquotes">
     <ion-card-header>
-      <ion-card-title>
-        {{note.title}}
-      </ion-card-title>
+      {{note.title}}
     </ion-card-header>
 
-    <div *ngIf="note.image != null" class="removable-image">
-      <button ion-button small color="dark" (click)="removeImage(note.$key, note.title, note.note)">
-        <ion-icon name="close"></ion-icon>
-      </button>
-      <img [src]="note.image" onerror="this.style.display='none'"/>
-    </div>
+    <ion-card-content [innerHtml]="note.note"></ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-only (click)="regularShare(note.title, note.note)" color="primary" clear>
+            <ion-icon class="share-icon" name="md-share"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-only (click)="noteIsFlagged(note.$key)" color="primary" clear>
+            <ion-icon class="share-icon" name="md-flag"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-    <ion-card-content>
-      {{note.note}}
-      <br><br>
-      <!--<p text-right><i>{{showDate(note.date) | date: 'dd/MM/yyyy'}}</i></p>-->
-    </ion-card-content>
-    <ion-row no-padding>
-      <ion-col>
-        <!--<button ion-button clear color="dark" (click)="updateNote(note.$key, note.title, note.note)">-->
-          <!--<ion-icon name="create"></ion-icon>-->
+    <!--<ion-row no-padding>-->
+      <!--<ion-col>-->
+        <!--<button ion-button-->
+                <!--clear-->
+                <!--color="primary"-->
+                <!--(click)="shareNoteIos(note.title, note.note)">-->
+          <!--<ion-icon name="md-share"></ion-icon>-->
         <!--</button>-->
-        <!--<button ion-button clear color="dark" (click)="pickImage(note.$key, note.title, note.note, note.image)">-->
-          <!--<ion-icon name="image"></ion-icon>-->
+        <!--<button-->
+            <!--ion-button-->
+            <!--clear-->
+            <!--color="dark" (click)="noteIsFlagged(note.$key)">-->
+          <!--<ion-icon name="md-flag"></ion-icon>-->
         <!--</button>-->
-        <button ion-button
-                clear
-                color="primary"
-                (click)="shareNote(note.title, note.note, note.image)">
-          <ion-icon name="md-share"></ion-icon>
-        </button>
-        <button
-            ion-button
-            clear
-            color="dark" (click)="noteIsFlagged(note.$key)">
-          <ion-icon name="md-flag"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
+      <!--</ion-col>-->
+    <!--</ion-row>-->
   </ion-card>
 
   <ion-fab top right>
