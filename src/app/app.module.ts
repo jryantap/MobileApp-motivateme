@@ -19,7 +19,7 @@ import {NotesPage} from "../pages/notes/notes";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {IonicStorageModule} from '@ionic/storage';
 import {RedditPage} from "../pages/reddit/reddit";
-import {Http, HttpModule} from "@angular/http";
+import {HttpModule} from "@angular/http";
 import {DetailsPage} from "../pages/details/details";
 import {EulaPage} from "../pages/eula/eula";
 
