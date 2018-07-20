@@ -1,4 +1,3 @@
-**PROJECT IS NOT UPDATED**
 ---
 My mobile app project.  I'm applying what I'm learning with Ionic 2 framework.  ~~NOT YET COMPLETE.~~ Maybe complete(?) :) <br /> 
 
